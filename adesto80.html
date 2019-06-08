@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>ADES to Obs80 converter</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="css/adescss.css">
+        <script type="text/javascript" src="scripts/adesTo80.js"></script>
+    </head>
+    
+    <body>
+    <h1> ADES to Obs80 </h1>
+        <p> This page will convert Astrometrica ADES output to the old 80-column format. 
+        This may sometimes be necessary when submitting observations to tools (like MPChecker) that do
+        not accept ADES. Note there is an inherrent loss of precision when converting to Obs80 and you 
+        should submit raw ADES data to the MPC when making reports. </p>
+        
+        <p> Copy the entire content of the Astrometrica ADES.psv file and paste 
+		    it into the ADES Report text area below. Then press Convert. </p>
+        
+        <p> The 80-column format will appear in the lower text area and is in 
+		    the clipboard ready to paste into an observation file. </p>
+        
+        <p> The conversion does not handle designation conversions for comet fragments, 
+		    satellites or old survey designations.</p> 
+        
+        <button title="Convert" id="convert" type="button" onclick="doConvert()">
+		    Convert</button>
+        
+        <h2> ADES Report </h2>
+        
+         <textarea id="myText" rows="30" cols="80"></textarea>
+         
+        <h2> 80-Col Observations </h2>
+          
+        <textarea id="yourText" rows="10" cols="80"></textarea>
+             
+        
+        <p> A. J. Evans June 2019 </p>
+        
+    </body>
+</html>
