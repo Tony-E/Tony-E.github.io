@@ -1,0 +1,228 @@
+/* 
+    Created on : 19-Oct-2015, 08:54:13
+    Author     : Tony Evans
+*/
+/* CSS layout */
+body {
+	margin: 10%;
+	padding: 0;
+	background-color: #000041;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", "Arial, sans-serif";
+	font-size: 15px;
+	color: #FFFFF8;
+}
+hr {
+    display: block;
+    width: 80%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+#masthead {
+	width: 100%;
+	text-align: center;
+        background-color: #000021;
+}
+#logo {
+	margin: 5px;
+}
+#container {
+	clear: both;
+	width: 100%;    
+        background-color: #220044;
+}
+#left_col {
+	float: left;
+	width: 23%;
+        position: fixed;
+        height: 80%;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", "Arial, sans-serif";
+	text-align: left;
+        overflow: auto;
+        padding-left: 7px;
+}
+
+#page_content {
+        float: right;
+	width: 75%;
+        background-color: #202040;
+}
+#simarea {
+    padding-left: 5%;
+}
+
+#footer {
+	clear: both;
+        width: 100%;
+        text-align: center;
+            
+}
+#searchbox {
+	float: right;
+	width: 300px;
+	clip: rect(10px, 10px, auto, auto);
+}
+a:link {
+	color: #FFCCFF;
+	text-decoration: underline;
+}
+a:hover {
+	color: #CCFFCC;
+}
+a:visited {
+	color: #CCFFFF;
+}
+
+#varmenu {
+
+	font-weight: bold;
+	position: fixed;
+	width: 165px;
+	padding: 5px;
+	top: 300px;
+}
+h1 {
+	text-align: center;
+        color: #F5F5FF
+}
+h2 {
+        color: #BBBBDD;
+}
+h3 {
+        color: #99BBDD;
+}
+table {
+	padding: 5px;
+	vertical-align: top;
+	border-collapse: collapse;
+	border-spacing: 5px;
+	text-align: left;
+	white-space: normal;
+	table-layout: auto;
+	width: 100%;
+}
+a:active {
+	color: #FFFFFF;
+}
+#topiclist {
+	table-layout: auto;
+	border-collapse: collapse;
+	border-spacing: 5px;
+	width: 60%;
+	padding: 5px;
+	vertical-align: top;
+	text-align: left;
+	text-indent: 5px;
+	white-space: nowrap;
+}
+#imagesright {
+	float: right;
+	margin: 5px;
+	height: 400px;
+	width: 400px;
+}
+#imagesleft {
+	float: left;
+	margin: 5px;
+}
+#fullblock {
+	width: 100%;
+	margin: 5px;
+	display: table-row;
+}
+
+#fullblockcentre {
+	width: 100%;
+	margin: 5px;
+	display: table-row;
+	text-align: center;
+}
+.maintext {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+	text-align: justify;
+	
+}
+#simulationtext {
+	margin: 10px;
+	display: inline;
+	text-align: left;
+	width: 850px;
+	height: 650px;
+}
+#leftstuff {
+	border: 1px solid #99CCFF;
+	float: left;
+	width: 49%;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#canvasid {
+    margin: 0;
+    position: relative;
+  
+}
+#layer2 {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+}
+#layer1 {
+    top: 0;
+    left: 0;
+    position: relative;
+    z-index: 1;
+}
+#ctlbuttons {
+    width: inherit;
+    margin: 0 auto;
+    position: static;
+    text-align: center;
+}
+#navcontainer {
+    height: inherit;
+    text-align: right;
+}
+#navcontainer ul
+{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+#navcontainer ul li { display: inline; }
+
+#navcontainer ul li a
+{
+text-decoration: none;
+padding: .1em 1em;
+color: #fff;
+background-color: #036;
+}
+
+#navcontainer ul li a:hover
+{
+color: #fff;
+background-color: #369;
+}
+
+
+#myText {
+    white-space: nowrap;
+     overflow: auto;
+     width: 100%;
+}
+
+#yourText {
+     white-space: nowrap;
+     overflow: auto;
+     width: 100%;
+}
