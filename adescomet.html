@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Merge Comet position and magnitude observations for ADES report</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="css/adescomet.css">
+        <script type="text/javascript" src="js/adescomet.js"></script>
+    </head>
+    <body>
+        <h1>Merge Comet astrometry and photometry for ADES report </h1>
+        <p> The purpose is to construct an ADES report containing positional data obtained using a small aperture
+            with photometric data obtained using a larger aperture.</p>
+        
+        <p> Using Astrometrica, measure the position of the nucleus using a small aperture to ensure the measured position is not 
+            "dragged" by any non-symmetrical brightness of the coma and tail. Be sure not to add any "notes" so that the note code 
+            ends up as blank or K (for a stacked images). </p>
+        
+        <p> Adjust the aperture so that it includes a suitable amount of the coma. 
+		Typically this will be 2-3 FWHMs for a nuclear magnitude and as big as 
+		you want for a Total magnitude. You can also select a different photometric catalog if desired.
+            Measure the comet using the "Centroid" button, repeating Centroid/OK several times until the flux is at maximum. Select any non-blank "notes" code other than K.</p>
+        
+        <p> Copy and paste the entire contents of the resulting ADES Report file into the space below and press "Convert". The combined report will appear in the 
+            lower window and will be available in your clipboard ready to paste into an empty .psv file for submission to the MPC.</p> 
+             
+        <h2>ADES Report </h2>
+        
+         <textarea id="myText" rows="30" ></textarea>
+         <p></p>
+         
+         <button title="Convert" id="convert" type="button" onclick="doConvert()">Convert</button>     
+         
+        <h2> Combined Observations </h2>
+          
+        <textarea id="yourText" rows="30"></textarea>
+             
+        
+    </body>
+</html>
