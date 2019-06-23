@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>2002 AA29 Orbit</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="css/newstyle2.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Orbit of 2002 AA29.">
+        <script type="text/javascript" src="js/jsingointegrate.js"></script>
+        <script type="text/javascript" src="js/jsingobody.js"></script>
+    </head>
+
+    <body onresize="resizeCanvas()">    
+    
+ <!-- Display selection buttons float above the simulation - change target jdf and description only -->
+                
+         <div id="ctlbuttons">
+        
+            <p>
+              <button class="button" onclick="init('2002AA29overview.jdf')">Orbit</button>
+              <button class="button" onclick="init('2002AA29horseshoe.jdf')">Horseshoe</button>
+            </p>
+            
+            <hr color="#00FFFF" width="90%">
+               
+        
+<!-- Control buttons float above the simulation - do not change -->                
+     
+             <button title="Stop/start the animation" id="stopStart" class="button2" onclick="stopStart()">Stop</button>
+             <button title= "Reverse direction" class="button2"  onclick="reverse()">Reverse</button>
+             <button title="Zoom in" class="button2"  onpointerdown="msd(1)" onpointerup="msu()">Zoom+</button>
+             <button title="Zoom out" class="button2"  onpointerdown="msd(2)" onpointerup="msu()">Zoom-</button>
+             <button title="Tilt up" class="button2"  onpointerdown="msd(3)" onpointerup="msu()">Tilt+</button>
+             <button title="Tilt down" class="button2"  onpointerdown="msd(4)" onpointerup="msu()">Tilt-</button>
+             <button title="Rotate clockwise" class="button2"  onpointerdown="msd(5)" onpointerup="msu()">Rotate+</button>
+             <button title="Roate anticlockwise" class="button2"  onpointerdown="msd(6)" onpointerup="msu()">Rotate-</button>
+             <button title="Faster" class="button2"  onpointerdown="msd(7)" onpointerup="msu()">Speed+</button>
+             <button title="Slower" class="button2"  onpointerdown="msd(8)" onpointerup="msu()">Speed-</button>
+             <button title="Cycle: Orbits, trails, both, neither" class="button2"  onclick="trails()" >Orbit/Trail</button>
+             <button title="Show/hide names"     class="button2"  onclick="names()" >Names</button> 
+                    
+        </div>  
+        
+<!-- Simulation area is 2 overlayed canvasses - do not change -->         
+                
+ <div id="simarea">
+        <div id="canvasid" onpointerdown="mdown(event);" onpointerup="mup(event);" >
+            <canvas id="layer1" height="700" width="700">
+                        Sorry, your browser does not support this HTML5 animation.</canvas>
+            <canvas id="layer2" height="700" width="700">
+                        Sorry, your browser does not support this HTML5 animation.</canvas>  
+        </div>
+   </div>
+ 
+<!-- Initialise the simulation - insert the name of the jdf file for the iinitial simulation -->               
+        <script>
+            init("2002AA29overview.jdf");
+        </script>
+    </body>
+</html>

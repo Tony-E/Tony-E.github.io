@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>2002 AA29 Orbit</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="css/newstyle2.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Orbit of Asteroid 2015 TB145.">
+        <script type="text/javascript" src="js2/JSSAve/jsingointegrate.js"></script>
+        <script type="text/javascript" src="js/jsingobody.js"></script>
+    </head>
+
+    <body onresize="resizeCanvas()">
+ 
+<!-- Insert a button to change jdf  <button type="button" onclick="init('2002AA29overview.jdf')">AA29 Introduction</button> -->
+ 
+         
+                
+<!-- Text  in paragraph above simulatiom ********************* should be 2 lines for optimal positioning  -->
+    <div class="maintext">
+              <p>
+              2002 AA29 is in a 1:1 resonant orbit with Earth and is said to be "co-orbital". Press here
+              <button type="button" onclick="init('2002AA29horseshoe.jdf')">AA29 Horseshoe</button> to see the so-called Horeseshoe behaviour.
+              </p>
+              </div>  
+        
+<!-- Control buttons float above the simulation - do not change -->                
+     <div id="ctlbuttons">
+            <button title="Stop/start the animation" id="stopStart" type="button" onclick="stopStart()">Stop</button>
+            <button title= "Reverse direction" type="button"  onclick="reverse()">Reverse</button>
+            <button title="Zoom in" type="button"  onmousedown="msd(1)" onmouseup="msu()">Zoom+</button>
+            <button title="Zoom out" type="button"  onmousedown="msd(2)" onmouseup="msu()">Zoom-</button>
+            <button title="Tilt up" type="button"  onmousedown="msd(3)" onmouseup="msu()">Tilt+</button>
+            <button title="Tilt down" type="button"  onmousedown="msd(4)" onmouseup="msu()">Tilt-</button>
+            <button title="Rotate clockwise" type="button"  onmousedown="msd(5)" onmouseup="msu()">Rotate+</button>
+            <button title="Roate anticlockwise" type="button"  onmousedown="msd(6)" onmouseup="msu()">Rotate-</button>
+            <button title="Faster" type="button"  onmousedown="msd(7)" onmouseup="msu()">Speed+</button>
+            <button title="Slower" type="button"  onmousedown="msd(8)" onmouseup="msu()">Speed-</button>
+            <button title="Cycle: Orbits, trails, both, neither" type="button"  onclick="trails()" >Orbit/Trail</button>
+            <button title="Show/hide names"     type="button"  onclick="names()" >Names</button>         
+        </div>  
+        
+<!-- Simulation area is 2 overlayed canvasses - do not change -->         
+                
+ <div id="simarea">
+        <div id="canvasid" >
+            <canvas id="layer1" height="700" width="700">
+                        Sorry, your browser does not support this HTML5 animation.</canvas>
+            <canvas id="layer2" height="700" width="700">
+                        Sorry, your browser does not support this HTML5 animation.</canvas>  
+        </div>
+   </div>
+   
+<!-- Additional comments below the simulation - as much as you like -->   
+
+     <div class="maintext">
+               <p>The simulation starts with Earth and the asteroid quite close and orbiting together. Use Tilt to see that the asteroid is 
+                    in a slightly different plane to the Earth and crosses Earth's orbit so that they come very close.
+                    Speed up the integration and the distance between the asteroid and Earth gets slowly greater with the asteroid leading the Earth.</p>
+               <p> In the "Horeseshoe" view, rotating coordinates are used here to hold Earth in a constant direction relative to the Sun. AA29 can be seen making its way
+                    round to the other side of Earth. It will then slow down and allow Earth to move ahead. 
+					This behaviour is repeated and is called a horseshoe orbit.</p>     
+                    
+                    
+                    The simulation includes Solar System planets barycentres and 2002AA29. Yoshida 6th order with variable step-times.</p>
+                </div>             
+          
+<!-- Initialise the simulation - insert the name of the jdf file for the required simulation -->               
+        <script>
+            init("2002AA29overview.jdf");
+        </script>
+    </body>
+</html>
