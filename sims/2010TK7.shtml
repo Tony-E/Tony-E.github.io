@@ -67,6 +67,31 @@
                 </div>
                 
 <!--#include file="canvases1.html" -->
+<!-- ***********************  Dual canvases and control buttons ********************** -->    
+   <div id="simarea">
+        <div id="canvasid" >
+            <canvas id="layer1" height="700" width="700">
+                        Sorry, your browser does not support this HTML5 animation.</canvas>
+            <canvas id="layer2" height="700" width="700">
+                        Sorry, your browser does not support this HTML5 animation.</canvas>  
+        </div>
+                
+        <div id="ctlbuttons">
+            <button title="Stop/start the animation" id="stopStart" type="button" onclick="stopStart()">Stop</button>
+            <button title= "Reverse direction" type="button"  onclick="reverse()">Reverse</button>
+            <button title="Zoom in" type="button"  onmousedown="msd(1)" onmouseup="msu()">Zoom+</button>
+            <button title="Zoom out" type="button"  onmousedown="msd(2)" onmouseup="msu()">Zoom-</button>
+            <button title="Tilt up" type="button"  onmousedown="msd(3)" onmouseup="msu()">Tilt+</button>
+            <button title="Tilt down" type="button"  onmousedown="msd(4)" onmouseup="msu()">Tilt-</button>
+            <button title="Rotate clockwise" type="button"  onmousedown="msd(5)" onmouseup="msu()">Rotate+</button>
+            <button title="Roate anticlockwise" type="button"  onmousedown="msd(6)" onmouseup="msu()">Rotate-</button>
+            <button title="Faster" type="button"  onmousedown="msd(7)" onmouseup="msu()">Speed+</button>
+            <button title="Slower" type="button"  onmousedown="msd(8)" onmouseup="msu()">Speed-</button>
+            <button title="Cycle: Orbits, trails, both, neither" type="button"  onclick="trails()" >Orbit/Trail</button>
+            <button title="Show/hide names"     type="button"  onclick="names()" >Names</button>         
+        </div>
+   </div>
+
                 
             <!-- Text  in paragraph below simulatiom ********************* -->            
                 
