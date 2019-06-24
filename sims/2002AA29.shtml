@@ -4,11 +4,11 @@
     <head>
         <title>2002 AA29 Orbit</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link type="text/css" rel="stylesheet" href="css/newstyle2.css">
+        <link type="text/css" rel="stylesheet" href="../css/newstyle.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Orbit of Asteroid 2015 TB145.">
-        <script type="text/javascript" src="js2/JSSAve/jsingointegrate.js"></script>
-        <script type="text/javascript" src="js/jsingobody.js"></script>
+        <script type="text/javascript" src="../scripts/jsingointegrate.js"></script>
+        <script type="text/javascript" src="../scripts/jsingobody.js"></script>
     </head>
 
     <body onresize="resizeCanvas()">
