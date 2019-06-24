@@ -80,7 +80,7 @@
         </div>
         <!--#include file="footer.html" -->
         <script>
-            init("2010TK7b.jdf");
+            init("jdf/2010TK7b.jdf");
         </script>
     </body>
 </html>
