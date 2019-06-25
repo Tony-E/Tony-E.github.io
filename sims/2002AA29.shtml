@@ -20,8 +20,8 @@
         
 <!-- Control buttons float above the simulation - do not change -->                
      <div id="ctlbuttons">
-            <button title="Stop/start the animation" id="stopStart" type="button" onclick="stopStart()">Stop</button>
-            <button title= "Reverse direction" type="button"  onclick="reverse()">Reverse</button>
+            <button class="button" title="Stop/start the animation" id="stopStart" type="button" onclick="stopStart()">Stop</button>
+            <button class="button2" title= "Reverse direction" type="button"  onclick="reverse()">Reverse</button>
             <button title="Zoom in" type="button"  onmousedown="msd(1)" onmouseup="msu()">Zoom+</button>
             <button title="Zoom out" type="button"  onmousedown="msd(2)" onmouseup="msu()">Zoom-</button>
             <button title="Tilt up" type="button"  onmousedown="msd(3)" onmouseup="msu()">Tilt+</button>
