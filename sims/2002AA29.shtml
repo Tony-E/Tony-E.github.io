@@ -16,12 +16,7 @@
        
                 
 <!-- Text  in paragraph above simulatiom should be 2 lines for optimal positioning  -->
-    <div class="maintext">
-              <p>
-              2002 AA29 is in a 1:1 resonant orbit with Earth and is said to be "co-orbital". Press here
-              <button type="button" onclick="init('2002AA29horseshoe.jdf')">AA29 Horseshoe</button> to see the so-called Horeseshoe behaviour.
-              </p>
-              </div>  
+   
         
 <!-- Control buttons float above the simulation - do not change -->                
      <div id="ctlbuttons">
@@ -59,9 +54,14 @@
                <p> In the "Horeseshoe" view, rotating coordinates are used here to hold Earth in a constant direction relative to the Sun. AA29 can be seen making its way
                     round to the other side of Earth. It will then slow down and allow Earth to move ahead. 
 					This behaviour is repeated and is called a horseshoe orbit.</p>     
+          
+              <p>
+              2002 AA29 is in a 1:1 resonant orbit with Earth and is said to be "co-orbital". Press here
+              <button type="button" onclick="init('2002AA29horseshoe.jdf')">AA29 Horseshoe</button> to see the so-called Horeseshoe behaviour.
+              </p>
+            
                     
-                    
-                    The simulation includes Solar System planets barycentres and 2002AA29. Yoshida 6th order with variable step-times.</p>
+                    <p> The simulation includes Solar System planets barycentres and 2002AA29. Yoshida 6th order with variable step-times.</p>
                 </div>             
           
 <!-- Initialise the simulation - insert the name of the jdf file for the required simulation -->               
