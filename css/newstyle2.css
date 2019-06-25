@@ -7,10 +7,18 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #FFFFFF;
+	background-color: #000080;
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", "Arial, sans-serif";
 	font-size: 15px;
-	color: #FFFFF8;
+	color: #FAFAD2;
+}
+.maintext {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+	text-align: justify;
+	width: 80%
 }
 
 #simarea {
