@@ -11,14 +11,10 @@
         <script type="text/javascript" src="../scripts/jsingobody.js"></script>
     </head>
 
-    <body onresize="resizeCanvas()">
- 
-       
-                
-<!-- Text  in paragraph above simulatiom should be 2 lines for optimal positioning  -->
-   
+    <body onresize="resizeCanvas()">   
         
-<!-- Control buttons float above the simulation - do not change -->                
+<!-- Control buttons float above the simulation - do not change -->  
+
      <div id="ctlbuttons">
             <button class="button" title="Stop/start the animation" id="stopStart" type="button" onclick="stopStart()">Stop</button>
             <button class="button2" title= "Reverse direction" type="button"  onclick="reverse()">Reverse</button>
@@ -48,21 +44,23 @@
 <!-- Additional comments below the simulation - as much as you like -->   
 
      <div class="maintext">
-               <p>The simulation starts with Earth and the asteroid quite close and orbiting together. Use Tilt to see that the asteroid is 
-                    in a slightly different plane to the Earth and crosses Earth's orbit so that they come very close.
-                    Speed up the integration and the distance between the asteroid and Earth gets slowly greater with the asteroid leading the Earth.</p>
-               <p> In the "Horeseshoe" view, rotating coordinates are used here to hold Earth in a constant direction relative to the Sun. AA29 can be seen making its way
-                    round to the other side of Earth. It will then slow down and allow Earth to move ahead. 
-					This behaviour is repeated and is called a horseshoe orbit.</p>     
-          
-              <p>
-              2002 AA29 is in a 1:1 resonant orbit with Earth and is said to be "co-orbital". Press here
-              <button type="button" onclick="init('2002AA29horseshoe.jdf')">AA29 Horseshoe</button> to see the so-called Horeseshoe behaviour.
-              </p>
-            
-                    
-                    <p> The simulation includes Solar System planets barycentres and 2002AA29. Yoshida 6th order with variable step-times.</p>
-                </div>             
+            <p>2002 AA29 is in a 1:1 resonant orbit with Earth and is said to be "co-orbital". </p>
+            <p>The simulation starts with Earth and the asteroid quite close and orbiting together. 
+	       Use Tilt to see that the asteroid is in a slightly different plane to the Earth and 
+	       crosses Earth's orbit so that they come very close. Speed up the integration and the distance between 
+	       the asteroid and Earth gets slowly greater with the asteroid leading the Earth.</p>
+	       
+            <p>Press here <button type="button" onclick="init('2002AA29horseshoe.jdf')">AA29 Horseshoe</button> to see the so-called 
+	       Horeseshoe behaviour.In this view, rotating coordinates are used to hold Earth in a constant direction relative to the Sun.
+	       2002 AA29 can be seen making its way round to the other side of Earth. It will then slow down and allow Earth to move ahead. 
+	       This behaviour is repeated and is called a horseshoe orbit.</p>    
+	       
+            <p>Press here <button type="button" onclick="init('2002AA29overview.jdf')">AA29 Overview</button>to return to the initial 
+	       view of the orbits.</p>
+           
+            <p>The simulation includes Solar System planet barycentres and 2002 AA29. Yoshida 6th order integration with variable 
+	       step-times.</p>
+      </div>             
           
 <!-- Initialise the simulation - insert the name of the jdf file for the required simulation -->               
         <script>
