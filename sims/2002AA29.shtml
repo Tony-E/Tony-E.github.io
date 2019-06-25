@@ -6,18 +6,16 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" rel="stylesheet" href="../css/newstyle.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Orbit of Asteroid 2015 TB145.">
+        <meta name="description" content="Orbit of Asteroid 2002 AA29.">
         <script type="text/javascript" src="../scripts/jsingointegrate.js"></script>
         <script type="text/javascript" src="../scripts/jsingobody.js"></script>
     </head>
 
     <body onresize="resizeCanvas()">
  
-<!-- Insert a button to change jdf  <button type="button" onclick="init('2002AA29overview.jdf')">AA29 Introduction</button> -->
- 
-         
+       
                 
-<!-- Text  in paragraph above simulatiom ********************* should be 2 lines for optimal positioning  -->
+<!-- Text  in paragraph above simulatiom should be 2 lines for optimal positioning  -->
     <div class="maintext">
               <p>
               2002 AA29 is in a 1:1 resonant orbit with Earth and is said to be "co-orbital". Press here
