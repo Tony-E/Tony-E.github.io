@@ -183,9 +183,10 @@ a:active {
     z-index: 1;
 }
 #ctlbuttons {
-    width: inherit;
+    width: 90%;
     margin: 0 auto;
-    position: static;
+    position: fixed;
+    top: 0;
     text-align: center;
 }
 #navcontainer {
