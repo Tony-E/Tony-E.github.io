@@ -1,0 +1,68 @@
+/* 
+    Created on : 12 April 2018
+    Author     : Tony Evans
+    Description: CSS for JSIngo simulation pane
+*/
+/* CSS layout */
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #FFFFFF;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", "Arial, sans-serif";
+	font-size: 15px;
+	color: #FFFFF8;
+}
+
+#simarea {
+    width 100%;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+#canvasid {
+    margin: 0;
+    position: relative;
+  
+}
+#layer2 {
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+}
+#layer1 {
+    top: 0;
+    left: 0;
+    position: relative;
+    z-index: 1;
+}
+#ctlbuttons {
+    position: fixed;
+    top: 10px;
+    text-align: center;
+    z-index: 99;
+    width: 100%;
+    touch-action: none;
+}
+
+.button {
+    width: 100px;
+    background-color: #ccccff;
+    font-size: 14px;
+    padding: 8px 8px;
+    border-radius: 4px;
+    border: 1px solid #6666aa;
+    } 
+    
+.button:hover {background-color: #aaaadd;}
+    
+.button2 {
+    width: 80px;
+    background-color: #ccffcc;
+    font-size: 14px;
+    padding: 8px 8px;
+    border-radius: 4px;
+    border: 1px solid #66aa66;
+}
+
+.button2:hover {background-color: #aaddaa;}
