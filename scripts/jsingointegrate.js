@@ -324,8 +324,10 @@ function Screen(){
      this.reSize = function() {
         reDraw = true;
         var widl=document.getElementById("page_content"); 
-        var winwid = window.innerWidth;
-        var winht  = window.innerHeight;
+        //var winwid = window.innerWidth;
+        //var winht  = window.innerHeight;
+        var winht = screen.availHeight;
+        var winwid = screen.availWidth;
         this.canvas1.width = winwid;
         this.canvas2.width = winwid;
         this.canvas1.height= winwid;
