@@ -17,17 +17,17 @@
 
      <div id="ctlbuttons">
             <button class="button" title="Stop/start the animation" id="stopStart" type="button" onclick="stopStart()">Stop</button>
-            <button class="button2" title= "Reverse direction" type="button"  onclick="reverse()">Reverse</button>
-            <button title="Zoom in" type="button"  onmousedown="msd(1)" onmouseup="msu()">Zoom+</button>
-            <button title="Zoom out" type="button"  onmousedown="msd(2)" onmouseup="msu()">Zoom-</button>
-            <button title="Tilt up" type="button"  onmousedown="msd(3)" onmouseup="msu()">Tilt+</button>
-            <button title="Tilt down" type="button"  onmousedown="msd(4)" onmouseup="msu()">Tilt-</button>
-            <button title="Rotate clockwise" type="button"  onmousedown="msd(5)" onmouseup="msu()">Rotate+</button>
-            <button title="Roate anticlockwise" type="button"  onmousedown="msd(6)" onmouseup="msu()">Rotate-</button>
-            <button title="Faster" type="button"  onmousedown="msd(7)" onmouseup="msu()">Speed+</button>
-            <button title="Slower" type="button"  onmousedown="msd(8)" onmouseup="msu()">Speed-</button>
-            <button title="Cycle: Orbits, trails, both, neither" type="button"  onclick="trails()" >Orbit/Trail</button>
-            <button title="Show/hide names"     type="button"  onclick="names()" >Names</button>         
+            <button class="button" title= "Reverse direction" type="button"  onclick="reverse()">Reverse</button>
+            <button class="button" title="Zoom in" type="button"  onmousedown="msd(1)" onmouseup="msu()">Zoom+</button>
+            <button class="button" title="Zoom out" type="button"  onmousedown="msd(2)" onmouseup="msu()">Zoom-</button>
+            <button class="button" title="Tilt up" type="button"  onmousedown="msd(3)" onmouseup="msu()">Tilt+</button>
+            <button class="button" title="Tilt down" type="button"  onmousedown="msd(4)" onmouseup="msu()">Tilt-</button>
+            <button class="button" title="Rotate clockwise" type="button"  onmousedown="msd(5)" onmouseup="msu()">Rotate+</button>
+            <button class="button" title="Roate anticlockwise" type="button"  onmousedown="msd(6)" onmouseup="msu()">Rotate-</button>
+            <button class="button" title="Faster" type="button"  onmousedown="msd(7)" onmouseup="msu()">Speed+</button>
+            <button class="button" title="Slower" type="button"  onmousedown="msd(8)" onmouseup="msu()">Speed-</button>
+            <button class="button" title="Cycle: Orbits, trails, both, neither" type="button"  onclick="trails()" >Orbit/Trail</button>
+            <button class="button" title="Show/hide names"     type="button"  onclick="names()" >Names</button>         
         </div>  
         
 <!-- Simulation area is 2 overlayed canvasses - do not change -->         
