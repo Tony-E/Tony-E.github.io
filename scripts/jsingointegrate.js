@@ -323,15 +323,12 @@ function Screen(){
      // canvas has been resized
      this.reSize = function() {
         reDraw = true;
-        var widl=document.getElementById("page_content"); 
-        //var winwid = window.innerWidth;
-        //var winht  = window.innerHeight;
-        var winht = screen.availHeight;
-        var winwid = screen.availWidth;
+        var winwid = window.innerWidth;
+        var winht  = window.innerHeight;
         this.canvas1.width = winwid;
         this.canvas2.width = winwid;
-        this.canvas1.height= winwid;
-        this.canvas2.height= winwid; 
+        this.canvas1.height= winht;
+        this.canvas2.height= winht; 
         this.hi = this.canvas1.height;                         
         this.wi = this.canvas1.width;
         this.centx = Math.round(this.wi/2);
