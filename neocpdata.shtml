@@ -4,8 +4,8 @@
     <head>
         <title>NEOCP Observation Data</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link type="text/css" rel="stylesheet" href="css/newstyle.css">
-        <script type="text/javascript" src="js/neocpdata.js"></script>
+        <link type="text/css" rel="stylesheet" href="css/adescss.css">
+        <script type="text/javascript" src="scripts/neocpdata.js"></script>
     </head>
     <body>
         <p> This is a quickly developed page to get data from the MPCs NEOCP records and 
