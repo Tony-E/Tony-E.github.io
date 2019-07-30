@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>NEOCP Observation Data</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="css/newstyle.css">
+        <script type="text/javascript" src="js/neocpdata.js"></script>
+    </head>
+    <body>
+        <p> This is a quickly developed page to get data from the MPCs NEOCP records and 
+            convert it to normal OBS80 frmat. </p>
+        
+        <p> Enter the temporary designation of the NEOCP in the textbox. Then press Fetch. </p>
+        
+        <p> the raw NEOCP data will appear in the upper text area and the OBS80 version in the lower text area.</p>
+        
+        <p> The Obs80 version will also be placed in the clipboard ready for use in Find_Orb. </p>
+        
+        <form> Enter NEOCP is: <input title="neocp" name="neocp" id="neocp" size="15" type="text" />
+    
+        <button title="Fetch" id="convert" type="button" onclick="doFetch(neocp)">Fetch</button>
+         
+        </form>
+             
+        <h2> NEOCP Data </h2>
+        
+         <textarea id="myText" rows="30" cols="80"></textarea>
+         
+        <h2> 80-Col Observations </h2>
+          
+        <textarea id="yourText" rows="10" cols="80"></textarea>
+        <br>
+        <br>
+        <br>
+        <p> When the results appear, they will be on you clipboard. </p>
+             
+        
+        
+        
+    </body>
+</html>
