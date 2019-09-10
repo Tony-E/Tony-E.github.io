@@ -1,1 +1,60 @@
+<!DOCTYPE html>
 
+<html>
+    <head>
+        <title>Yoshida 6th Order Demo</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="../css/newstyle2.css">
+        <meta name="description" content="Solar Sytem with Yoshida 6th order integration.">
+        <script type="text/javascript" src="../scripts/jsingointegrate.js"></script>
+        <script type="text/javascript" src="../scripts/jsingobody.js"></script>
+    </head>
+
+    <body onresize="resizeCanvas()">   
+        
+<!-- Control buttons float above the simulation - do not change -->  
+
+     <div id="ctlbuttons">
+     <br>
+            <button class="button" title="Stop/start the animation" id="stopStart" type="button" onclick="stopStart()">Stop</button>
+            <button class="button" title= "Reverse direction" type="button"  onclick="reverse()">Reverse</button>
+            <button class="button" title="Zoom in" type="button"  onmousedown="msd(1)" onmouseup="msu()">Zoom+</button>
+            <button class="button" title="Zoom out" type="button"  onmousedown="msd(2)" onmouseup="msu()">Zoom-</button>
+            <button class="button" title="Tilt up" type="button"  onmousedown="msd(3)" onmouseup="msu()">Tilt+</button>
+            <button class="button" title="Tilt down" type="button"  onmousedown="msd(4)" onmouseup="msu()">Tilt-</button>
+            <button class="button" title="Rotate clockwise" type="button"  onmousedown="msd(5)" onmouseup="msu()">Rotate+</button>
+            <button class="button" title="Roate anticlockwise" type="button"  onmousedown="msd(6)" onmouseup="msu()">Rotate-</button>
+            <button class="button" title="Faster" type="button"  onmousedown="msd(7)" onmouseup="msu()">Speed+</button>
+            <button class="button" title="Slower" type="button"  onmousedown="msd(8)" onmouseup="msu()">Speed-</button>
+            <button class="button" title="Cycle: Orbits, trails, both, neither" type="button"  onclick="trails()" >Orbit/Trail</button>
+            <button class="button" title="Show/hide names"     type="button"  onclick="names()" >Names</button>         
+        </div>  
+        
+<!-- Simulation area is 2 overlayed canvasses - do not change -->         
+                
+ <div id="simarea">
+        <div id="canvasid" >
+            <canvas id="layer1" height="700" width="700">
+                        Sorry, your browser does not support this HTML5 animation.</canvas>
+            <canvas id="layer2" height="700" width="700">
+                        Sorry, your browser does not support this HTML5 animation.</canvas>  
+        </div>
+   </div>
+   
+<!-- Additional comments below the simulation - as much as you like -->   
+
+     <div class="maintext">
+            <p>Reference set of planetary barycentres as a 2020-01-01.5 </p>
+	       
+                     
+            <p>The simulation includes Solar System planet barycentres. Yoshida 6th order integration with fixed  
+	             0.1 day time-step and no relativity.</p>
+      </div>             
+          
+<!-- Initialise the simulation - insert the name of the jdf file for the required simulation -->               
+        <script>
+            init("YoshidaDemo.jdf");
+        </script>
+    </body>
+</html>
+© 2019 GitHub, Inc.
