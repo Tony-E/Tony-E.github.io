@@ -5,7 +5,6 @@ method=7
 vstep=0
 showstep=50
 sleep=1
-fixed
 orbits
 stopped
 gofor=0
