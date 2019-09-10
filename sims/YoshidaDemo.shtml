@@ -53,7 +53,7 @@
           
 <!-- Initialise the simulation - insert the name of the jdf file for the required simulation -->               
         <script>
-            init("YoshidaDemo.jdf");
+            init("Yoshida 6 demo.jdf");
         </script>
     </body>
 </html>
