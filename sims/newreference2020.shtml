@@ -23,11 +23,17 @@
             <button class="button" title="Zoom out" type="button"  onmousedown="msd(2)" onmouseup="msu()"
 	                     ontouchstart="msd(2)" ontouchend="msu()" ontouchcancel="msu()">Zoom-</button>
             <button class="button" title="Tilt up" type="button"  onmousedown="msd(3)" onmouseup="msu()">Tilt+</button>
+	                     ontouchstart="msd(3)" ontouchend="msu()" ontouchcancel="msu()">Zoom+</button>
             <button class="button" title="Tilt down" type="button"  onmousedown="msd(4)" onmouseup="msu()">Tilt-</button>
+	                     ontouchstart="msd(4)" ontouchend="msu()" ontouchcancel="msu()">Zoom+</button>
             <button class="button" title="Rotate clockwise" type="button"  onmousedown="msd(5)" onmouseup="msu()">Rotate+</button>
+	                     ontouchstart="msd(5)" ontouchend="msu()" ontouchcancel="msu()">Zoom+</button>    
             <button class="button" title="Roate anticlockwise" type="button"  onmousedown="msd(6)" onmouseup="msu()">Rotate-</button>
+	                     ontouchstart="msd(6)" ontouchend="msu()" ontouchcancel="msu()">Zoom+</button>
             <button class="button" title="Faster" type="button"  onmousedown="msd(7)" onmouseup="msu()">Speed+</button>
+	                     ontouchstart="msd(7)" ontouchend="msu()" ontouchcancel="msu()">Zoom+</button>
             <button class="button" title="Slower" type="button"  onmousedown="msd(8)" onmouseup="msu()">Speed-</button>
+	                     ontouchstart="msd(8)" ontouchend="msu()" ontouchcancel="msu()">Zoom+</button>
             <button class="button" title="Cycle: Orbits, trails, both, neither" type="button"  onclick="trails()" >Orbit/Trail</button>
             <button class="button" title="Show/hide names"     type="button"  onclick="names()" >Names</button>         
         </div>  
