@@ -19,9 +19,9 @@
             <button class="button" title="Stop/start the animation" id="stopStart" type="button" onclick="stopStart()">Stop</button>
             <button class="button" title= "Reverse direction" type="button"  onclick="reverse()">Reverse</button>
             <button class="button" title="Zoom in" type="button"  onmousedown="msd(1)" onmouseup="msu()" 
-	                     ontouchstart="msd(1)" ontouchend="msu()">Zoom+</button>
+	                     ontouchstart="msd(1)" ontouchend="msu()" ontouchcancel="msu()">Zoom+</button>
             <button class="button" title="Zoom out" type="button"  onmousedown="msd(2)" onmouseup="msu()"
-	                     ontouchstart="msd(2)" ontouchend="msu()">Zoom-</button>
+	                     ontouchstart="msd(2)" ontouchend="msu()" ontouchcancel="msu()">Zoom-</button>
             <button class="button" title="Tilt up" type="button"  onmousedown="msd(3)" onmouseup="msu()">Tilt+</button>
             <button class="button" title="Tilt down" type="button"  onmousedown="msd(4)" onmouseup="msu()">Tilt-</button>
             <button class="button" title="Rotate clockwise" type="button"  onmousedown="msd(5)" onmouseup="msu()">Rotate+</button>
