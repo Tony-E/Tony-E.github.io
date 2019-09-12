@@ -26,7 +26,11 @@ var pi2 = 2*Math.PI;
 var YO6 = [0.784513610477560E0, 0.235573213359357E0, -1.17767998417887E0, 1.31518632068391E0];
 
 
-
+function nodefault(event) {
+  event.preventDefault();  
+   return true;
+}   
+   
 /*********************************************************************************************
  * Function init called from the webpage reads the definition file and sets up global
  * variables containing the bodies and parameters.
