@@ -10,7 +10,7 @@
         <script type="text/javascript" src="../scripts/jsingobody.js"></script>
     </head>
 
-    <body onresize="resizeCanvas()" oncontextmenu="return false" onlongtouch="return false">
+    <body onresize="resizeCanvas()" oncontextmenu="return false" onlongtouch="return true">
         
 <!-- Control buttons float above the simulation - do not change -->  
 
