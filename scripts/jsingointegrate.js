@@ -27,7 +27,12 @@ var YO6 = [0.784513610477560E0, 0.235573213359357E0, -1.17767998417887E0, 1.3151
 
 
 function nodefault(event) {
-  event.preventDefault();  
+  var e = event || window.event;
+      e.preventDefault && e.preventDefault();
+      e.stopPropagation && e.stopPropagation();
+      e.cancelBubble = true;
+      e.returnValue = false;
+      return false;
    return true;
 }   
    
