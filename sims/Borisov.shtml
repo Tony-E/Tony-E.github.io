@@ -52,11 +52,9 @@
 <!-- Additional comments below the simulation - as much as you like -->   
 
      <div class="maintext">
-            <p>Reference set of planetary barycentres as a 2020.01.01,5 </p>
-	       
-                     
-            <p>The simulation includes Solar System planet barycentres. Yoshida 6th order integration with variable 
-	             step-times.</p>
+            <p>The simulation is based on Planetary Systems Barycentres plus I2/Boridov.</p>
+	    <p>Initial state vectors and planet masses from JPL Horizons.</p>
+            <p>Yoshida 6th order integration with variable step-times.</p>
       </div>             
           
 <!-- Initialise the simulation - insert the name of the jdf file for the required simulation -->               
