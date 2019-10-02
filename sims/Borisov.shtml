@@ -59,7 +59,7 @@
           
 <!-- Initialise the simulation - insert the name of the jdf file for the required simulation -->               
         <script>
-            init("Borisov.jdf");
+            init("Borisov2.jdf");
         </script>
     </body>
 </html>
