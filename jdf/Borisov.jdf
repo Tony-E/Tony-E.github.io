@@ -3,7 +3,7 @@ title=C/2019 Q4
 calcstep=0
 method=7
 vstep=100
-showstep=1
+showstep=2
 sleep=100
 orbits
 gofor=0.0
