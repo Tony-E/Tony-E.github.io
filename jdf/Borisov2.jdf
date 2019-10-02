@@ -14,7 +14,7 @@ up=0.0
 left=0.0
 rotate=0.0
 tilt=1.0
-julian=2458850.0000
+julian=2457228.0000
 body 
  name=Sun mass=1.0 colour=ffff00
  size=696000 noorbit  central  follow 
