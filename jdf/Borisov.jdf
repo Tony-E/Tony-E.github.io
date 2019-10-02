@@ -13,7 +13,7 @@ scale=25
 up=0.0
 left=0.0
 rotate=0.0
-tilt=0.0
+tilt=1.0
 julian=2458850.0000
 body 
 name=Sun colour=ffff00 mass=1.0 size=696000 central  follow  noorbit 
