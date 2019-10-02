@@ -9,7 +9,7 @@ orbits
 gofor=0.0
 runTo=0.0
 record=0.0
-scale=50
+scale=25
 up=0.0
 left=0.0
 rotate=0.0
