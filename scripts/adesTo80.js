@@ -224,6 +224,7 @@ function packDesig(t) {
         d+= Number(t.substring(11,13)) / Number(24);
         d+= Number(t.substring(14,16)) / Number(1440);
         d+= Number(t.substring(17,19)) / Number(86400);
+        d+= Number(0.000000001);
         obsDate = t.substring(0,4) + " " + t.substring(5,7) + " ";
         obsDate+= decimalFormat(d,2,5);
         }   
