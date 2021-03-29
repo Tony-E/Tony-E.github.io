@@ -48,21 +48,24 @@
 		<ul>
 			<li>Refresh = Refresh all data.</li>
 			<li>(Observatory selection): Select G40 or W88.</li>
-			<li>Ephemeris = Show the MPC Ephemeris page for selected non-NEOCP objects.</li>
-			<li>NEOCPs = Show the MPC Ephemeris page for selected NEOCP/PCCP objects.</li>
-			<li>+24hrs = Show data for the following night.</li>
+			<li>Ephemeris* = Show the MPC Ephemeris page for selected non-NEOCP objects.</li>
+			<li>NEOCPs* = Show the MPC Ephemeris page for selected NEOCP/PCCP objects.</li>
+			<li>+24hrs** = Show data for the following night.</li>
 			<li>ClearSel = Turn off all selections.</li>
 			<li>Where? = List visibility times of the selected objects at either observatory.</li>
 			<li>Filter = Press this button to refresh the list after changing filter settings.</li>
 			<li>MPCORB = Use this button to select the local copy of MPCORB.</li>	
+			<p>* If currently daytime at the observatory, ephemeris shows the period of the next available observing session (sunset-sunrise). If
+				currently nightime at the observatory, ephemeris shows the period of the current observing session. </p>
+			<p>** Ephemeris shows the observing session 1 day later than that defined in the rile (*) above. </p>			
 		</ul>
 		<h2>Filter</h2>
 		<ul>
 			<li>Twilight = Select the twilight to apply when calculating earliest visibility.</li>
 			<li>Maximum magnitude download = Objects in the downloaded lists, with magnitudes fainter than this, are ignored.</li>
 			<li>Maximum magnitude display = Objects with magnitude fainter than this are not displayed.</li>
-			<li>Minimum rise/set altitude = The rise and set times are established based on a horizon set at this altitude. 
-				An object must rise above this horizon to appear in the list.</li>
+			<li>Minimum rise/set altitude = Rise and set times for an object are established based on a horizon set at this altitude. 
+				An object must rise above this altitude to appear in the list.</li>
 			<li>Minimum galactic latitude = Objects with a Galactic Latitude less than this are excluded from the list.</li>
 			<li>Show asteroids with uncertainty >= Excludes objects with a lower uncertainty. Does not apply to NEOCPs.</li>
 		</ul>
