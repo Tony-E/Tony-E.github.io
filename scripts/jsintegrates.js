@@ -54,7 +54,7 @@ function init(jdffile) {
     
     
    // retrieve and process definition file 
-    var jdftext = httpGet("../jdf/"+jdffile); // get definition file
+    var jdftext = httpGet(jdffile); // get definition file
     var jdfarray = jdftext.split(/\s+/gm);          // split into tokens 
     for (var i = 0; i < jdfarray.length; i++) {     // save parameters and body data
         var line = jdfarray[i];
