@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Candidates Analysis</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="css/newstyle.css">
+      
+        <script src="js/mainthread.js"></script>
+        <script src="js/mainbods.js"></script>
+        <script src="js/sorttable.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+    </head>
+    <body id="body">
+        <p> This is an experimental program to generate A-Team targets. </p>
+        <form id="filters">
+            <label for="mag">Max Mag:</label>
+            <input type="text" id="mag" name="mag" value="19.0">
+            <label for="alt">Min Alt.</label>
+            <input type="text" id="alt" name="alt" value="35">
+            <label>Min Uncert:</label>
+            <input type="text" id="unc" name="unc" value="1"><br>
+        </form>
+        
+        <br>
+        <button title="Fetch" id="process" type="button" onclick="doFetch()">Fetch</button>
+        <button title="Filter" id="filter" type="button" onclick="doFilter()">Filter</button>
+        
+        <h2> Comments </h2>
+        <textarea id="comments" rows="10" cols="80"></textarea>
+        <br>
+        
+        <h2>NEOCP Potentially Visible</h2>
+        <table class="sortable">
+        <thead> 
+            <tr>
+                <th>Id</th>
+                <th>Mag</th>
+                <th>RA</th>
+                <th>Dec</th>
+                <th>Score</th>
+                <th>Status</th>
+                <th>Visible</th>
+            </tr>
+        </thead>
+        <tbody id="tbody1"></tbody>     
+        </table>
+        
+        <h2>NEOs Potentially Visible</h2>    
+        <table class="sortable">
+        <thead> 
+            <tr>
+                <th>Id</th>
+                <th>Priority</th>
+                <th>Mag</th>
+                <th>RA</th>
+                <th>Dec</th>
+                <th>Uncert.</th>
+                <th>Last Obs.</th>
+                <th>Visible</th>
+            </tr>
+        </thead>
+        <tbody id="tbody2"></tbody>
+            
+            
+            
+        </table>
+        <script>init();</script>
+    </body>
+</html>
