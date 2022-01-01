@@ -1,7 +1,7 @@
  
 /* global toRadians, sun, obs, filter */
  
-/* define math function ans constants as aid to readability. */
+/* define math functions and constants as aid to readability. */
 var    twoPI = Math.PI*2,
        PI   =  Math.PI,
        sin  =  Math.sin,
@@ -11,32 +11,31 @@ var    twoPI = Math.PI*2,
        atan2 = Math.atan2,
        abs =   Math.abs,
        acos =  Math.acos;
-/* Ecliptic                                                     */
+/* Ecliptic */
 var eps = 23.4373*toRadians; // eclip+tic
 
-/******************************************************************
+/*************************************************************************
  * Class Coord is a point on a sphere (ra,dec) or (long,lat).     
  **/
 class Coord {
-    constructor(x,y)    {
+    constructor(x,y) {
         this.x = x;
         this.y = y;
     }
-    
-    /* Sky angle between this and coordinate c. */
+   /* Sky angle between this coord and another coord c. */
     getAngle(c) {
         return acos(sin(c.y)*sin(this.y)+cos(c.y)*cos(this.y)*cos(c.x-this.x));
     }
-    
-    /* Hours either side of meridian object at p is above altitude alt. */
+   /* Hours either side of meridian object p is above altitude alt. degrees 
+     * when viewed at an observatory located a this position. Zero is returned
+     * if the object does not rise above alt. when at meridian.*/
     riseTime(p, alt) {
         let zRad = alt * toRadians;       
         let HARad = acos((sin(zRad)-sin(p.y)*sin(this.y))/(cos(p.y)*cos(this.y)));
         if (isNaN(HARad)) return 0;
         return (HARad/toRadians)/15;
     }
-    
-    /* Galactic latitude of this object */
+   /* Galactic latitude of this RA/Dec coordinate. */
     galLat(){
         let gpRA = 3.366;   // Galactic pole RA (radians)
         let gpDec = 0.4734; // Galactic pole Dec(radians)
@@ -44,8 +43,7 @@ class Coord {
                 cos(this.y) * cos(this.x-gpRA);
         return asin(d)/toRadians;
     }
-    
-    /* Get equatorial coord equivalent to this ecliptic coord */
+   /* Equatorial coord equivalent to this ecliptic coord */
     getEquatorial() {
         let eq = new Coord();
         eq.y= asin(sin(this.y)*cos(eps) + cos(this.y)*sin(eps)*sin(this.x) );     
@@ -58,7 +56,7 @@ class Coord {
 }
 
 /********************************************************************
- * Class Neocp is a NEOCP object.                               
+ * Class Body is a NEO or NEOCP object.                               
  **/
 class Body {
     constructor() {
@@ -76,32 +74,40 @@ class Body {
         this.visible = false;
         
     }   
-    /* check if this object is visible from current observatory. */
+   /* check if this object is visible from current observatory. */
     checkVisible() {
         this.visible = false;
+       /* number of hours above altitude at observatory */
         let h = obs.position.riseTime(this.coord, filter.altLimit);
+       /* not visible if never above altitude limit or too faint */
         if ((!(h>0)) || this.v>filter.magLimit) return;
+       /* not visible if score/uncertainty too low */
         if (this.type !== "neocp" && this.score < filter.uncLimit) return;
+       /* visible if HA from midnight meridian is less than time above horizon.*/
         let diff = abs(this.coord.x - sun.raMidnight)/(toRadians * 15);
         if ( diff< h) {this.visible = true;}
     }
 } 
 
 /*****************************************************************
- * Class Observatory is an observatory                           
+ * Class Observatory is an observatory.                       
  **/
 class Observatory {
-    constructor(long,lat) {
+    constructor(long,lat,code,name) {
         this.position = new Coord(long*toRadians,lat*toRadians);
-        this.ha = 0; // half astronomical day
+        this.ha = 0; 
+        this.code = code;
+        this.name =name;
     }
+   /* ha is the length of astronomical day at this observatory */
     setTimes() {
-        this.ha = abs(this.position.riseTime(sun.raDec, -15));
+        this.ha = abs(this.position.riseTime(sun.raDec, -18));
     }
 }
 
 /************************************************************
- * Class Sun is the Sun.
+ * Class Sun is the Sun. Position based on  
+ *  http://www.stjarnhimlen.se/comp/tutorial.html.
  **/
 class Sun {
     constructor() {
@@ -122,8 +128,8 @@ class Sun {
 }
     
 /***********************************************************
- * Class Filter is the flter values from the DOM.
- */
+ * Class Filter contains the flter values from the DOM.
+ **/
 class Filter {
     constructor() {
         this.magLimit = 0;
@@ -131,12 +137,80 @@ class Filter {
         this.uncLimit = 0;
     }
     setFilter() {
+       /* get filter values from the document */
         this.magLimit = document.getElementById("mag").value;
         this.altLimit =  document.getElementById("alt").value;
-        this.uncLimit = document.getElementById("unc").value;
+        this.uncLimit = document.getElementById("unc").value; 
+       /* if cookies enabled, save filter values */ 
+        var cookie = new Cookie();
+        if (cookie.enabled) {
+            cookie.setCookie("magLimit", this.magLimit, 7);
+            cookie.setCookie("altLimit", this.altLimit, 7);
+            cookie.setCookie("uncLimit", this.uncLimit, 7);
+        }
+    }
+    /* if cookies enabled, load filter cookies */
+    getFilter() {
+        var cookie = new Cookie();
+        if (cookie.enabled) {
+            let v = cookie.getCookie("magLimit");
+            if ("x" !== v) this.magLimit = v;
+            v = cookie.getCookie("altLimit");
+            if ("x" !== v) this.altLimit = v;
+            v = cookie.getCookie("uncLimit");
+            if ("x" !== v) this.uncLimit = v;
+            document.getElementById("mag").value = this.magLimit;
+            document.getElementById("alt").value = this.altLimit;
+            document.getElementById("unc").value = this.uncLimit; 
+         
+         }
     }
  }
-
+ 
+/**************************************************************
+ * Translate orbit codes to orbit names.
+ * @param {String} x Orbit code
+ * @returns {String} Orbit name
+ **/
+ function translate(x) {
+     if (x === "Apo") return "Apollo";
+     if (x === "Amo") return "Amor";
+     if (x === "Ate") return "Aten";
+     if (x === "VI ") return "Risk(VI)";
+     if (x === "TNO") return "TNO";
+     if (x === "Cen") return "Centaur";
+     return "unknown";
+ }
+ class Cookie {
+     constructor() {
+        this.enabled = navigator.cookieEnabled;
+        this.magLimit = 0;
+        this.altLimit =  0;
+        this.uncLimit = 0;
+     }
+     setCookie(cname, cvalue, exdays) {
+         const d = new Date();
+         d.setTime(d.getTime() + (exdays*24*60*60*1000));
+         let expires = "expires="+ d.toUTCString();
+         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+     }
+     getCookie(cname) {
+         let name = cname + "=";
+         let decodedCookie = decodeURIComponent(document.cookie);
+         let ca = decodedCookie.split(';');
+         for(let i = 0; i <ca.length; i++) {
+             let c = ca[i];
+             while (c.charAt(0) === ' ') {
+                 c = c.substring(1);
+             }
+         if (c.indexOf(name) === 0) {
+             return c.substring(name.length, c.length);
+         }
+       }
+       return "x";
+     }
+    
+}
  
  
          
