@@ -1,0 +1,678 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0055)https://cgi.minorplanetcenter.net/cgi-bin/customize.cgi -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!--<base href="/iau/">--><base href=".">
+
+
+  <link rel="stylesheet" type="text/css" href="./Dates Of Last Observation Of Unusual Minor Planets_files/mpc.css">
+  <link rel="stylesheet" type="text/css" href="./Dates Of Last Observation Of Unusual Minor Planets_files/table-sorter.css">
+  
+
+  <link media="all" rel="stylesheet" href="./Dates Of Last Observation Of Unusual Minor Planets_files/all.css">
+
+  <link rel="icon" type="image/png" href="https://cgi.minorplanetcenter.net/iau/figs/MPClogo16.png">
+  <meta name="description" content="We are the official body that deals with
+      astrometric observations and orbits of minor planets (asteroids) and comets.">
+
+  <meta name="keywords" content="astrometry, observations, orbits,
+      minor planets, asteroids, comets, near earth objects,
+      potentially hazardous asteroids">
+
+  <script type="text/javascript" src="./Dates Of Last Observation Of Unusual Minor Planets_files/jquery-latest.js.download"></script>
+<!--  <script type="text/javascript" src="/js/jquery.main.js"></script> -->
+<!--  <script type="text/javascript" src="/js/jquery.metadata.js"></script> -->
+  <script type="text/javascript" src="./Dates Of Last Observation Of Unusual Minor Planets_files/jquery.tablesorter.js.download"></script>
+  <script type="text/javascript" src="./Dates Of Last Observation Of Unusual Minor Planets_files/webtrends.js.download"></script>
+  <script type="text/javascript" src="./Dates Of Last Observation Of Unusual Minor Planets_files/track_pdfs.js.download"></script>
+  <link href="./Dates Of Last Observation Of Unusual Minor Planets_files/css" rel="stylesheet" type="text/css">
+
+
+<title>Dates Of Last Observation Of Unusual Minor Planets</title>
+<meta name="description" content="We are the official body that deals
+with astrometric observations and orbits of minor planets (asteroids) and
+comets.">
+<meta name="keywords" content="astrometry, observations, observation, orbits,
+orbit, minor planets, minor planet, asteroids, asteroid, comets, comet">
+</head>
+
+<!-- Body preamble -->
+
+<body>
+  <!-- wrapper -->
+  <div id="wrapper">
+    <div class="w1">
+      <!-- header -->
+      <header id="header">
+        <div class="holder">
+          <!-- logo -->
+          <h1 class="logo"><a href="https://cgi.minorplanetcenter.net/">The International Astronomical Union Minor Planet Center</a></h1>
+          <div class="area">
+            <!-- top-nav -->
+            <nav class="top-nav">
+              <ul>
+                <li><a href="https://cgi.minorplanetcenter.net/">Home</a></li>
+                <li><a href="https://cgi.minorplanetcenter.net/about">About</a></li>
+		<!-- Contact link changed to Jira -->
+                <li><a href="https://mpc-service.atlassian.net/servicedesk/customer/portals">Contact</a></li>
+              </ul>
+            </nav>
+            <!-- search-form -->
+            <div class="form-holder">
+              <!-- This commented code opens a new page for the search. -->
+              <!--<form class="search-form" method="get" action="https://www.google.com/search" target="_blank">-->
+              <form class="search-form" method="get" action="https://www.google.com/search">
+                <fieldset>
+                  <!--<label for="search">Search</label>-->
+                  <input type="hidden" name="sitesearch" value="minorplanetcenter.net">
+                  <input type="text" onfocus="if(this.value==this.defaultValue)this.value=&#39;&#39;;" onblur="if(this.value==&#39;&#39;)this.value=this.defaultValue;" id="search" name="q" value="Search MPC">
+                </fieldset>
+              </form>
+            </div>
+            <div class="social-bar">
+<!--              <a href="https://twitter.com/MinorPlanetCtr"><span class="social twitter">L</span></a> -->
+<!--              <a href="https://www.facebook.com/MinorPlanetCenter"><span class="social facebook">F</span></a> -->
+<!--              <a href="https://www.youtube.com/channel/UCtALMOQHuBxh5XMsYNiDhMg"><span class="social youtube">X</span></a> -->
+<!--              <a href="/iau/rss/mpc_feeds.html"><span class="social rss">R</span></a> -->
+            </div>
+          </div>
+        </div>
+        <nav class="nav-holder">
+          <!-- main navigation -->
+          <ul id="nav">
+            <li>
+              <a href="https://cgi.minorplanetcenter.net/iau/mpc.html"><span>OBSERVERS</span></a>
+              <ul>
+                <li><a href="https://cgi.minorplanetcenter.net/iau/MPEph/MPEph.html">Ephemeris Service</a></li>
+                <li><a href="https://cgi.minorplanetcenter.net/mpec/RecentMPECs.html">MPECs</a></li>
+                <li><a href="https://cgi.minorplanetcenter.net/iau/NEO/toconfirm_tabular.html">NEO Confirmation</a></li>
+                <li><a href="https://cgi.minorplanetcenter.net/iau/NEO/pccp_tabular.html">Possible Comet Confirmation</a></li>
+                <li><a href="https://cgi.minorplanetcenter.net/iau/Ephemerides/EphemOrbEls.html" class="nested">Orbital Elements</a>
+                  <ul>
+                    <li><a href="https://cgi.minorplanetcenter.net/iau/MPCORB.html">MPCORB</a></li>
+                    <li><a href="https://cgi.minorplanetcenter.net/iau/ECS/MPCAT/MPCAT.html">MPCAT</a></li>
+                    <li><a href="https://cgi.minorplanetcenter.net/iau/ECS/MPCUPDATE/MPCUPDATE.html">MPCUPDATE</a></li>
+                    <li><a href="https://cgi.minorplanetcenter.net/iau/Ephemerides/SoftwareEls.html">Orbital Elements for Software</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://cgi.minorplanetcenter.net/iau/services/MPCServices.html">Publications Overview</a></li>
+                <li><a href="https://cgi.minorplanetcenter.net/iau/ECS/MPCArchive/MPCArchive_TBL.html">Publications Archive</a></li>
+                <li><a href="https://cgi.minorplanetcenter.net/iau/NEO/TheNEOPage.html" class="nested">NEO Services</a>
+                  <ul>
+                    <li><a href="https://cgi.minorplanetcenter.net/iau/NEO/toconfirm_tabular.html">Confirmation</a></li>
+                    <li><a href="https://cgi.minorplanetcenter.net/iau/NEO/PossNEO.html">Ratings</a></li>
+                    <li><a href="https://cgi.minorplanetcenter.net/cgi-bin/neaobs.cgi">Observation Planning Aid</a></li>
+                    <li><a href="https://cgi.minorplanetcenter.net/cgi-bin/checkneo.cgi">NEOChecker</a></li>
+                    <li><a href="https://cgi.minorplanetcenter.net/cgi-bin/checkneocmt.cgi">NEOCMTChecker</a></li>
+                    <li><a href="https://cgi.minorplanetcenter.net/neocp_followup_report/">NEOCP Followup Report Form</a></li>
+                    <li><a href="https://cgi.minorplanetcenter.net/neocp_followup_reports/">NEOCP Followup Reports</a></li>
+                    <li><a href="https://cgi.minorplanetcenter.net/neocp_obs">NEOCP Recent Observations</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://cgi.minorplanetcenter.net/iau/services/WebCSAccess.html" class="nested">Other Observer Services</a>
+                  <ul>
+                    <li><a href="https://cgi.minorplanetcenter.net/whatsup">Observing Target List</a></li>
+                    <li><a href="https://cgi.minorplanetcenter.net/iau/NatSats/NaturalSatellites.html">Natural Satellite Ephemerides</a></li>
+                    <li><a href="https://cgi.minorplanetcenter.net/iau/MPEph/NewObjEphems.html">New Object Ephemerides</a></li>
+                    <li><a href="https://cgi.minorplanetcenter.net/cgi-bin/checkmp.cgi">MPChecker</a></li>
+                    <li><a href="https://cgi.minorplanetcenter.net/cgi-bin/checkcmt.cgi">CMTChecker</a></li>
+                    <li><a href="https://cgi.minorplanetcenter.net/iau/artsats/artsats.html">Distant Artificial Satellites</a></li>
+                    <li><a href="https://cgi.minorplanetcenter.net/iau/lists/Customize.html">Observing List Customizer</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://cgi.minorplanetcenter.net/db_search">Orbits/Observations Database</a></li>
+
+                <li><a href="http://alcdef.org/">Light Curve Database</a></li>
+
+                <li><a href="https://cgi.minorplanetcenter.net/iau/ECS/MPCAT-OBS/MPCAT-OBS.html">MPCAT-OBS</a></li>
+                <li><a href="https://cgi.minorplanetcenter.net/iau/SkyCoverage.html">Sky Coverage</a></li>
+                <li><a href="https://cgi.minorplanetcenter.net/iau/MPC_Documentation.html" class="nested">Documentation</a>
+                  <ul>
+                    <li><a href="https://cgi.minorplanetcenter.net/iau/info/TechInfo.html">MPC Submission Info</a></li>
+                    <li><a href="https://cgi.minorplanetcenter.net/iau/info/Astrometry.html">Astrometry Guide</a></li>
+                    <li><a href="https://cgi.minorplanetcenter.net/iau/WhatsNew.html">What's New</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://cgi.minorplanetcenter.net/iau/lists/Lists.html" class="nested">Lists and Plots</a>
+                  <ul>
+                    <li><a href="https://cgi.minorplanetcenter.net/iau/lists/MPLists.html">Minor Planets</a></li>
+                      <!--<ul>
+                        <li><a href="/iau/lists/t_atens.html">Atens</a></li>
+                        <li><a href="/iau/lists/t_apollos.html">Apollos</a></li>
+                        <li><a href="/iau/lists/t_amors.html">Amors</a></li>
+                        <li><a href="/iau/lists/t_centaurs.html">Centaurs and Scattered Disk Objects</a></li>
+                        <li><a href="/iau/lists/t_tnos.html">Transneptunian Objects</a></li>
+                        <li><a href="/iau/lists/t_others.html">Other Unusual Objects</a></li>
+                        <li><a href="/iau/lists/t_dangerous.html">Potentially Hazardous Asteroids</a></li>
+                      </ul>-->
+                    <li><a href="https://cgi.minorplanetcenter.net/iau/lists/CometLists.html">Comets</a></li>
+                      <!--<ul>
+                        <li><a href="/iau/lists/LastCometObs.html">Date of Last Observation</a></li>
+                        <li><a href="/iau/lists/LastYear.html">Designations from the Past Year</a></li>
+                        <li><a href="http://www.icq.eps.harvard.edu/CometMags.html">Comet Magnitude Estimates</a></li>
+                        <li><a href="/iau/lists/ClosestComets.html">Closest Approaches</a></li>
+                        <li><a href="/iau/lists/PeriodicCodes.html">Periodic Comets</a></li>
+                      </ul>-->
+                    <li><a href="https://cgi.minorplanetcenter.net/iau/lists/ObsCodesF.html">Observatory Codes</a></li>		
+                    <li><a href="https://cgi.minorplanetcenter.net/iau/Animations/Animations.html">Animations</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://cgi.minorplanetcenter.net/iau/MPCStatus.html">MPC Status</a></li>
+                <!--<li><%= link_to 'Summary', :controller => 'mpc', :action => 'summary' %></li>-->
+                <li><a href="https://cgi.minorplanetcenter.net/mpc/obs_stats_2014_2018">2014-18 NEO Obs Statistics</a></li>
+                <li><a href="https://cgi.minorplanetcenter.net/mpc/summary">Summary of Latest Data</a></li>
+              </ul>
+            </li>
+            <li><a href="https://cgi.minorplanetcenter.net/data"><span>DATA</span></a>
+            </li>
+            <li><a href="http://iawn.net/"><span>IAWN</span></a>
+            </li>
+            <li><a href="https://minorplanetcenter.net/mpcops/beta/"><span>BETA</span></a></li>
+            <li><a href="https://cgi.minorplanetcenter.net/iau/MPCStatus.html"><span style="color:Orange">STATUS</span></a></li>
+            <li><a href="https://sbnmpc.astro.umd.edu/"><span>SBN ANNEX</span></a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- main -->
+      <div id="main">
+
+
+<!-- Navigation Menu block -->
+
+<li class="yuimenuitemlabel alert"> Processing <a href="https://cgi.minorplanetcenter.net/iau/info/MPCOpStatus.html">(Info)</a></li>
+
+
+
+
+<!-- Main content block -->
+
+<br>
+<p>
+</p><h2>Dates Of Last Observation Of Unusual Minor Planets</h2>
+The following tables list the date of the last astrometric observation reported
+to the <a href="https://cgi.minorplanetcenter.net/iau/mpc.html">Minor Planet Center (MPC)</a> for each of the
+unusual minor planets for which it is reasonable to make predictions (short-arc
+unperturbed orbits from past years are excluded).  It is hoped that these
+tables will assist observers in planning a useful program of astrometric
+observation of these objects.  Ephemerides (from updated orbits for the
+unnumbered objects listed, that are complete through the observations listed
+below) may be generated using the <a href="https://cgi.minorplanetcenter.net/iau/MPEph/MPEph.html">on-line
+Minor Planet Ephemeris Service</a>.
+<p>
+Observers are reminded of the efficiency of making and reporting observations
+of specific objects on pairs of nearby nights, as the accuracy of an isolated
+single-night observation can be difficult to judge.
+</p><p>
+In the lists below, the objects are divided into three categories:
+one-opposition unnumbered objects; multiple-opposition unnumbered objects; and
+numbered objects.  For reference, the following quantities are given for
+each object: the uncertainty parameter U (where available), the arc in days
+or the number of oppositions utilised in the orbit solution, and
+low-precision values of the semi-major axis, eccentricity and inclination.
+Objects observed within the past 15 days are indicated with an asterisk and
+those objects unobserved within this period that are on the most recent
+<a href="https://cgi.minorplanetcenter.net/iau/services/MPEC.html"><i>MPEC</i></a>
+list of unusual objects are indicated with a `+'.
+</p><p>
+<b>Enhanced 2000 Dec. 26</b>.  The lists below now allow easy access to
+MPES ephemerides of objects listed herein.  Use the checkboxes on the left-hand
+side to select the objects (from any of the three lists) that you want to
+observe.  <a href="https://cgi.minorplanetcenter.net/iau/lists/LastUnusual.html#opt">Select your observing options from the bottom of
+the page</a> and then select `Get ephemerides'.  In the lists, the
+data given under `Currently' is as follows: current R.A. in decimal hours;
+current Decl. in decimal degrees; current V magnitude; current elongation;
+and current motion in deg/day.  `Current' refers to the time this page was
+last updated.
+</p><p>
+<a href="https://www.minorplanetcenter.net/iau/lists/Customize.html">Customize</a>
+this page.
+</p><p>
+If this list has not been updated in more two hours, please
+<a href="https://cgi.minorplanetcenter.net/cgi-bin/feedback.cgi?U=LastUnusual.html&amp;S=Problem">report this fact</a> (after ensuring that
+you are not looking at a cached copy of this page!).
+</p><p></p><hr>
+<p>
+This document was last updated on
+2021-11-10.76
+ UT
+</p><p></p><hr>
+<form method="POST" action="https://cgi.minorplanetcenter.net/cgi-bin/mpeph.cgi">
+<center><input type="submit" value=" Get ephemerides "> <input type="reset" value=" Reset form "></center><p></p><hr>
+<h2>One-Opposition Unnumbered Objects</h2>
+<p>Also available are <a href="https://www.minorplanetcenter.net/iau/NEO/BrightRecovery.html">bright (<i>V</i> brighter than 21)</a> and <a href="https://www.minorplanetcenter.net/iau/NEO/FaintRecovery.html">faint (<i></i> brighter than 24)</a> recovery opportunities for old one-opposition objects.
+</p><pre><b>    Designation                          Currently              Last obs.  Code   Mag.   U  Arc   a    e     i
+                                    R.A./Dec/  V /El./Motn</b>
+<input type="checkbox" name="Obj" value="K21V05R">         2021 VR5            Apo   1.3/+06/19.1/152/06.24  *2021 Nov. 10  807  19.6 V  7    1  2.54 0.68   1
+<input type="checkbox" name="Obj" value="K21V05M">         2021 VM5            Amo   3.2/-11/19.7/150/03.68  *2021 Nov. 10  807  19.7 V  8    2  2.45 0.59  10
+<input type="checkbox" name="Obj" value="K21V04Y">         2021 VY4            VI    4.1/-21/19.1/139/09.90  *2021 Nov. 10  I52  19.24G  6    2  0.89 0.40  17
+<input type="checkbox" name="Obj" value="K21V04W">         2021 VW4            VI    3.0/+19/18.9/179/08.31  *2021 Nov. 10  703          7    1  2.31 0.62   4
+<input type="checkbox" name="Obj" value="K21V04U">         2021 VU4            Apo  24.0/+01/15.7/131/254.96  *2021 Nov. 10  703  17.96G  7    2  2.32 0.67   3
+<input type="checkbox" name="Obj" value="K21V04H">         2021 VH4            Amo   3.6/-18/19.7/144/05.45  *2021 Nov.  9  W95          9    2  1.64 0.36  37
+<input type="checkbox" name="Obj" value="K21V03W">         2021 VW3            Apo  22.3/+25/18.7/114/05.79  *2021 Nov.  9  L18  18.8 G  8    3  2.02 0.60   5
+<input type="checkbox" name="Obj" value="K21V03V">         2021 VV3            Apo   2.0/+20/18.6/165/03.58  *2021 Nov.  9  Z80  17.0 G  7    3  1.21 0.70   9
+<input type="checkbox" name="Obj" value="K21V03T">         2021 VT3            Apo   0.8/-26/19.4/125/11.20  *2021 Nov.  9  W34  18.7 G  6    2  1.13 0.12  19
+<input type="checkbox" name="Obj" value="K21V02U">         2021 VU2            Ate   3.3/+06/19.9/169/05.15  *2021 Nov.  8  I52  19.83G  6    2  0.90 0.12   4
+<input type="checkbox" name="Obj" value="K21V02R">         2021 VR2            Apo   6.0/+04/17.2/135/65.62  *2021 Nov.  9  Z80  17.1 G  7    4  2.51 0.61   7
+<input type="checkbox" name="Obj" value="K21V02O">         2021 VO2            Amo   3.7/+20/19.9/170/02.05  *2021 Nov.  9  I52  20.60G  7    4  1.22 0.13   9
+<input type="checkbox" name="Obj" value="K21V00S">         2021 VS             Apo   2.4/+34/19.9/160/02.13  *2021 Nov.  9  703  19.73G  7    7  2.50 0.65  22
+<input type="checkbox" name="Obj" value="K21V00R">         2021 VR             Apo   3.4/-20/19.6/141/02.54  *2021 Nov.  7  I52  19.62G  8    6  1.47 0.34  22
+<input type="checkbox" name="Obj" value="K21V00G">         2021 VG             Amo   3.4/+02/19.1/163/06.51  *2021 Nov. 10  G96  19.01G  7    7  2.54 0.60   1
+<input type="checkbox" name="Obj" value="K21U09M">         2021 UM9            Apo   0.2/+25/17.3/139/07.93  *2021 Nov.  9  Z80  17.1 G  7   15  2.32 0.61   2
+<input type="checkbox" name="Obj" value="K21U05U">         2021 UU5            Apo   3.8/-22/19.7/138/01.05  *2021 Nov. 10  I52  20.60G  7   13  1.92 0.73  45
+<input type="checkbox" name="Obj" value="K21U03O">         2021 UO3            Apo   3.1/+04/18.6/166/10.39  *2021 Nov. 10  G96  18.54G  7   14  1.69 0.42   2
+<input type="checkbox" name="Obj" value="K21U03G">         2021 UG3            Amo   3.9/-15/20.0/144/01.47  *2021 Nov.  7  F51  20.60w  7   11  1.70 0.39  16
+<input type="checkbox" name="Obj" value="K21T21Q">         2021 TQ21           Apo   2.7/+02/19.7/164/00.85  *2021 Nov. 10  G96  19.69G  6   26  2.10 0.55   4
+<input type="checkbox" name="Obj" value="K21T04H">         2021 TH4            Amo   6.8/+06/19.6/124/01.13  *2021 Nov.  9  807  19.2 V  5   55  1.80 0.38  22
+<input type="checkbox" name="Obj" value="K21T02U">         2021 TU2            Amo   7.9/-02/19.7/106/01.65  *2021 Nov. 10  691  19.1 R  7   30  2.85 0.62  19
+<input type="checkbox" name="Obj" value="K21S03R">         2021 SR3            Amo   2.2/+07/19.5/164/00.68  *2021 Nov.  9  F51  19.1 w  6   41  2.18 0.51   1
+<input type="checkbox" name="Obj" value="K21S02Q">         2021 SQ2            Amo   3.7/-10/19.7/151/01.07  *2021 Oct. 31  F52  19.8 w  6   31  2.58 0.52  28
+<input type="checkbox" name="Obj" value="K21R16S">         2021 RS16           Amo   1.8/+12/20.0/161/01.50  *2021 Nov. 10  I52  20.03G  5   61  2.82 0.59   9
+<input type="checkbox" name="Obj" value="K21R02Y">         2021 RY2            Amo   6.2/+45/19.6/132/00.32  *2021 Nov.  9  A17  19.6 G  6   65  2.63 0.53   6
+<input type="checkbox" name="Obj" value="K21R02M">         2021 RM2            Apo   6.4/-58/19.7/093/01.95  *2021 Nov.  9  807  19.1 V  4   66  1.97 0.63  16
+<input type="checkbox" name="Obj" value="K21R00L">         2021 RL             Amo   7.1/+11/19.1/121/02.05  *2021 Nov.  9  T05  19.36c  5   67  2.59 0.59  12
+<input type="checkbox" name="Obj" value="K21Q06J">         2021 QJ6            Amo   5.6/+39/19.5/141/01.06  *2021 Nov.  5  G96  19.58G  5   67  2.31 0.52  15
+<input type="checkbox" name="Obj" value="K21P41O">         2021 PO41           Amo  21.7/+34/20.0/108/00.45  *2021 Nov.  5  G96  19.62G  4   95  2.39 0.46  30
+<input type="checkbox" name="Obj" value="K21P40N">         2021 PN40           Amo   2.3/+37/19.8/158/00.07  *2021 Nov.  9  D29  18.9 R  4   91  1.95 0.34   5
+<input type="checkbox" name="Obj" value="K21P20E">         2021 PE20           Amo   3.4/-10/19.2/151/00.34  *2021 Oct. 31  F51  21.09w  5   63  3.75 0.67  20
+<input type="checkbox" name="Obj" value="K21P04H">         2021 PH4            Apo   9.5/+13/19.8/088/01.25  *2021 Nov.  7  F51  20.6 w  5   92  2.71 0.65   7
+<input type="checkbox" name="Obj" value="K21N05Y">         2021 NY5            Amo  23.1/-50/19.8/094/01.20  *2021 Nov.  3  474  19.9 G  4  120  2.48 0.58  11
+<input type="checkbox" name="Obj" value="K21N05S">         2021 NS5            Amo   7.5/+39/19.2/118/00.33  *2021 Nov. 10  A17  19.0 G  4  124  2.63 0.60  11
+<input type="checkbox" name="Obj" value="K21M01O">         2021 MO1            Amo   0.1/+14/18.6/137/00.67  *2021 Nov.  9  246          3  143  2.81 0.56  14
+<input type="checkbox" name="Obj" value="K21M01G">         2021 MG1            Apo   6.6/-41/19.0/103/00.27  *2021 Nov. 10  807  19.1 V  4  144  2.76 0.65  24
+<input type="checkbox" name="Obj" value="K21L24Q">         2021 LQ24           Amo   6.0/-05/18.5/130/00.63  *2021 Nov. 10  A17  18.5 G  3  149  3.02 0.64  11
+<input type="checkbox" name="Obj" value="K21L15N">         2021 LN15           Amo   0.6/+34/19.9/144/00.41  *2021 Nov. 10  F51  20.12w  3  150  2.26 0.47   8
+<input type="checkbox" name="Obj" value="K20W01A">         2020 WA1            VI   10.5/+10/    /073/00.14   2020 Nov. 21  291  23.3 R  6    4  2.53 0.72   0
+<input type="checkbox" name="Obj" value="K20Q00G">         2020 QG             Apo   9.6/+16/    /087/00.33   2020 Aug. 18  J04  21.1 G  7    2  1.91 0.48   5
+<input type="checkbox" name="Obj" value="K20M04K">         2020 MK4            Cen  21.4/-19/19.9/090/00.07   2020 Nov. 13  474          4  151  6.15 0.02   7
+<input type="checkbox" name="Obj" value="K20J01N">         2020 JN1            Apo   8.4/+26/    /106/01.00   2020 May  14  L01  19.6 G  7    1  2.55 0.70   7
+<input type="checkbox" name="Obj" value="K19U08O">         2019 UO8            Apo   9.5/+15/    /088/00.86   2019 Oct. 29  T12  24.01G  5    3  2.20 0.78   0
+<input type="checkbox" name="Obj" value="K19R00Q">         2019 RQ             VI   11.1/+06/    /063/00.32   2019 Sep.  6  T12  24.19G  5    3  2.08 0.58   3
+<input type="checkbox" name="Obj" value="K17W14G">         2017 WG14           Ate   4.7/+44/19.1/146/08.80   2017 Dec.  7  695  21.7 R  6   20  0.69 0.54   8
+<input type="checkbox" name="Obj" value="K17W00P">         2017 WP             Apo   3.4/-56/18.9/105/08.61   2017 Nov. 27  I52  20.6 G  6   11  1.21 0.23  30
+<input type="checkbox" name="Obj" value="K17K27M">         2017 KM27           Apo   3.7/+32/19.7/163/00.40   2017 May  31  474  19.7 R  7    7  1.37 0.52   3
+<input type="checkbox" name="Obj" value="K16J05S">         2016 JS5            VI   11.1/+09/    /065/00.73   2016 May   5  474  18.7 R  5    2  2.11 0.63   3
+<input type="checkbox" name="Obj" value="K15E06O">         2015 EO6            Apo   9.6/+09/    /084/01.16   2015 Mar. 11  106  16.1 R  5    0  2.32 0.76   6
+<input type="checkbox" name="Obj" value="K14Y00F">         2014 YF             Ate   6.2/-46/19.8/102/01.38   2015 Feb. 19  568  23.2 R  3   79  0.91 0.15   6
+<input type="checkbox" name="Obj" value="K14HJ8D">         2014 HD198          VI    8.0/+19/    /110/00.64   2014 Apr. 26  W84          8    1  2.10 0.64   1
+<input type="checkbox" name="Obj" value="K10VD9K">         2010 VK139          Ate  15.8/+70/20.0/087/04.25   2010 Nov. 18  E12  17.0 V  5    4  0.78 0.28  27
+<input type="checkbox" name="Obj" value="K02V69O">         2002 VO69           Apo   6.3/+44/19.1/131/06.27   2002 Nov. 14  670          7    9  1.44 0.35  21
+<input type="checkbox" name="Obj" value="10563">         (10563)             Apo  17.9/-78/19.5/066/00.89   2021 July  2  I41  18.37r  010824  1.01 0.27  63
+
+</pre><hr>
+<h2>Multi-Opposition Unnumbered Objects</h2>
+<pre><b>    Designation                          Currently              Last obs.  Code   Mag.   U  Opps  a    e     i
+                                    R.A./Dec/  V /El./Motn</b>
+<input type="checkbox" name="Obj" value="K21P02A">         2021 PA2            Apo  10.7/+24/19.7/076/01.03  *2021 Nov.  7  703  18.77G  0    3  2.64 0.63   5
+<input type="checkbox" name="Obj" value="K21N39M">         2021 NM39           Amo   0.1/-37/18.5/111/01.32  *2021 Nov.  5  T08  18.54o  0    2  2.04 0.48   5
+<input type="checkbox" name="Obj" value="K21M01P">         2021 MP1            Amo  23.4/+70/19.8/118/00.26  *2021 Nov.  8  I41  20.20g  0    7  2.41 0.50  31
+<input type="checkbox" name="Obj" value="K21J24Q">         2021 JQ24           Amo   6.4/+23/17.4/133/00.36  *2021 Nov.  9  T05  17.32c  0    5  3.23 0.67   6
+<input type="checkbox" name="Obj" value="K21E04O">         2021 EO4            Apo   4.9/-11/19.2/139/00.96  *2021 Nov.  7  F51  19.06w  4    2  2.22 0.73  14
+<input type="checkbox" name="Obj" value="K20V01F">         2020 VF1            Cen   5.1/+19/19.7/151/00.09  *2021 Oct. 29  V00  19.56G  4    3 24.50 0.66  53
+<input type="checkbox" name="Obj" value="K19X00S">         2019 XS             Apo   2.6/+04/14.6/166/12.73  *2021 Nov. 10  L54  13.5 G  0    7  1.00 0.33   4
+<input type="checkbox" name="Obj" value="K19U06T">         2019 UT6            Apo   6.1/+10/18.9/135/03.12  *2021 Nov.  8  B67  18.2 G  0    2  1.59 0.51   2
+<input type="checkbox" name="Obj" value="K19N36N">         2019 NN36           Apo  23.6/-76/18.8/081/01.84   2021 Oct.  3  F51  20.0 w  0    5  1.52 0.45  10
+<input type="checkbox" name="Obj" value="K19L05L">         2019 LL5            Ate  19.4/-52/20.0/062/00.27   2020 Aug. 21  T05  18.81c  4    3  0.66 0.50  30
+<input type="checkbox" name="Obj" value="K19F00S">         2019 FS             Apo   2.5/-30/20.0/130/01.00  *2021 Nov.  3  W94  19.2 G  0    3  1.67 0.61  14
+<input type="checkbox" name="Obj" value="K19A12F">         2019 AF12           Amo   8.6/+48/19.7/107/00.52  *2021 Nov.  9  703  18.93G  0    4  2.15 0.48   8
+<input type="checkbox" name="Obj" value="K17W15A">         2017 WA15           Ate  21.5/+32/19.8/105/00.72   2021 Oct. 25  T05  18.41o  3    4  0.91 0.51  19
+<input type="checkbox" name="Obj" value="K17U42W">         2017 UW42           Amo   5.5/+35/18.9/143/00.18  *2021 Nov.  9  T05  18.96c  0    3  2.46 0.48   7
+<input type="checkbox" name="Obj" value="K17U05X">         2017 UX5            Apo  10.1/+17/19.8/081/02.05  *2021 Nov.  7  F51  19.42w  0    2  1.21 0.24  18
+<input type="checkbox" name="Obj" value="K17T03S">         2017 TS3            Apo  10.6/+22/19.6/076/03.28  *2021 Nov.  7  T08  18.80o  0    2  2.50 0.61   5
+<input type="checkbox" name="Obj" value="K17S19P">         2017 SP19           Amo   4.9/+28/19.9/152/00.98  *2021 Nov.  8  D29  19.3 R  0    2  2.53 0.58   5
+<input type="checkbox" name="Obj" value="K17G04G">         2017 GG4            Apo  22.9/-27/19.9/106/02.36   2019 Dec.  2  G96  21.5 G  2    2  1.66 0.68  22
+<input type="checkbox" name="Obj" value="K16X17U">         2016 XU17           Amo   1.2/+37/18.6/148/00.17  *2021 Nov.  9  703  18.47G  0    4  2.96 0.57  10
+<input type="checkbox" name="Obj" value="K16Q44J">         2016 QJ44           Apo  23.0/+38/19.9/123/00.39  *2021 Nov.  9  L38  19.5 G  0    3  1.38 0.32  10
+<input type="checkbox" name="Obj" value="K16J17H">         2016 JH17           Amo   6.1/-34/19.8/111/01.12   2021 June 20  T05  18.00o  0    3  1.39 0.27  25
+<input type="checkbox" name="Obj" value="K16J12G">         2016 JG12           Apo  22.1/+21/18.5/111/03.14  *2021 Nov.  9  Z80          0    4  1.30 0.33   5
+<input type="checkbox" name="Obj" value="K15F37F">         2015 FF37           Apo  17.5/+34/18.1/063/04.30  *2021 Nov.  7  I41  19.70r  0    5  1.53 0.42  15
+<input type="checkbox" name="Obj" value="K14T32X">         2014 TX32           Amo   3.7/-07/19.7/154/00.94  *2021 Nov.  8  703  19.94G  0    3  1.75 0.30  25
+<input type="checkbox" name="Obj" value="K13T04S">         2013 TS4            Amo   0.9/+05/19.8/146/00.40  *2021 Nov.  7  703  19.77G  0    2  1.93 0.36   3
+<input type="checkbox" name="Obj" value="K13Q48H">         2013 QH48           Amo   0.9/-20/18.5/130/00.30  *2021 Nov.  9  T08  18.55o  0    3  2.51 0.53   7
+<input type="checkbox" name="Obj" value="K12UD6S">         2012 US136          Apo  21.7/+61/18.8/110/00.48  *2021 Nov.  5  B88  18.5 G  0    4  4.29 0.91  52
+<input type="checkbox" name="Obj" value="K12Q50Q">         2012 QQ50           Apo  20.5/-01/20.0/081/00.44  *2021 Nov.  1  G96  19.85G  0    3  1.72 0.50   9
+<input type="checkbox" name="Obj" value="K12K18K">         2012 KK18           Amo   0.8/-35/19.8/117/00.69   2021 Sep. 15  247          0    3  2.74 0.55  16
+<input type="checkbox" name="Obj" value="K12D61E">         2012 DE61           Amo  23.6/+46/20.0/129/00.41  *2021 Nov.  4  G96  20.05G  1    3  2.27 0.45  19
+<input type="checkbox" name="Obj" value="K11Y10Q">         2011 YQ10           Amo   4.7/+11/17.4/155/00.25  *2021 Nov.  9  691  17.6 V  0    3  2.24 0.52   2
+<input type="checkbox" name="Obj" value="K11U21G">         2011 UG21           Ate  23.1/-45/19.8/098/00.81   2021 Jan.  8  F51  20.9 w  3    5  0.94 0.55  15
+<input type="checkbox" name="Obj" value="K10W07Q">         2010 WQ7            Amo   5.9/+07/19.9/138/00.09  *2021 Oct. 30  F51  20.8 w  1    3  2.37 0.56  14
+<input type="checkbox" name="Obj" value="K10U07S">         2010 US7            Apo  10.6/+21/18.6/076/05.72  *2021 Nov.  9  T05  18.32c  0    4  1.96 0.64  55
+<input type="checkbox" name="Obj" value="K10O00A">         2010 OA             Apo   3.2/-22/17.8/140/02.01  *2021 Nov.  9  T08  17.35o  0    3  1.97 0.51   6
+<input type="checkbox" name="Obj" value="K10MC7D">         2010 MD127          Apo  21.9/+66/18.6/111/03.21  *2021 Nov.  8  T08  17.96o  0    2  1.77 0.60  20
+<input type="checkbox" name="Obj" value="K09W25N">         2009 WN25           Amo   6.5/-34/19.2/109/02.27  *2021 Nov.  8  703  19.05G  0    3  3.33 0.63  71
+<input type="checkbox" name="Obj" value="K09H51X">         2009 HX51           Apo   7.7/+16/20.0/114/01.98  *2021 Nov.  8  G96  19.89G  0    2  1.50 0.39  12
+<input type="checkbox" name="Obj" value="K08X02Q">         2008 XQ2            Apo  20.8/+23/17.5/094/05.38  *2021 Nov.  9  K74  16.9 G  0    4  2.20 0.55  15
+<input type="checkbox" name="Obj" value="K08S01N">         2008 SN1            Amo   1.1/+25/19.5/152/00.38  *2021 Nov.  9  D29  18.6 R  0    3  2.66 0.51   6
+<input type="checkbox" name="Obj" value="K07VD8D">         2007 VD138          Amo   4.0/-04/18.8/154/06.10  *2021 Nov.  8  T05  18.60c  0    2  2.80 0.64   2
+<input type="checkbox" name="Obj" value="K07T23C">         2007 TC23           Amo   2.1/-04/17.9/154/01.37  *2021 Nov.  9  F51  18.2 w  0    2  2.82 0.61  13
+<input type="checkbox" name="Obj" value="K06O05A">         2006 OA5            Apo  19.2/+23/20.0/073/00.91   2021 Oct. 14  691  20.0 R  0    4  1.52 0.38  11
+<input type="checkbox" name="Obj" value="K05R33O">         2005 RO33           Amo   2.5/-12/19.5/149/00.48  *2021 Nov.  8  F51  19.5 w  0    3  1.92 0.41   7
+<input type="checkbox" name="Obj" value="K05O03G">         2005 OG3            Amo   1.6/-13/19.2/143/00.60  *2021 Nov.  8  T05  18.48c  0    3  2.17 0.49   6
+<input type="checkbox" name="Obj" value="K04U00E">         2004 UE             Apo  24.0/-10/16.0/127/10.38  *2021 Nov.  9  L18  15.6 G  0    2  2.63 0.65  15
+<input type="checkbox" name="Obj" value="K03U26W">         2003 UW26           Amo   3.4/+39/19.8/158/00.45  *2021 Nov.  9  D29  18.9 R  0    3  2.71 0.52  19
+<input type="checkbox" name="Obj" value="K03U00E">         2003 UE             Amo   4.6/-06/19.8/147/01.23  *2021 Nov.  8  I41  19.62r  0    2  2.35 0.45  25
+<input type="checkbox" name="Obj" value="K02T69P">         2002 TP69           Amo   1.0/-20/17.8/132/02.28  *2021 Nov.  9  T08  17.79o  0    2  1.95 0.47   2
+<input type="checkbox" name="Obj" value="K02RD7O">         2002 RO137          Amo   1.2/-13/19.5/138/00.73  *2021 Nov.  8  T05  19.42c  0    3  2.15 0.45   7
+<input type="checkbox" name="Obj" value="J99F21J">         1999 FJ21           Apo  17.8/+53/19.7/078/00.81  *2021 Oct. 31  J95  19.0 G  0    5  1.27 0.27  22
+<input type="checkbox" name="Obj" value="J96V03B">         1996 VB3            Apo   2.5/+02/19.7/162/00.38  *2021 Nov. 10  G96  19.70G  0    4  1.63 0.55   3
+<input type="checkbox" name="Obj" value="J91T03F">         1991 TF3            Apo   0.1/+22/20.0/138/00.26  *2021 Nov.  7  G96  19.71G  0    4  2.23 0.57  15
+
+</pre><hr>
+<h2>Numbered Objects</h2>
+<pre><b>    Designation and name                 Currently              Last obs.  Code   Mag.   U  Opps  a    e     i
+                                    R.A./Dec/  V /El./Motn</b>
+<input type="checkbox" name="Obj" value="r1914">(531914) (531914)            Apo  22.9/-71/18.9/082/01.37   2019 Jan. 15  204  19.8 G  1    4  2.06 0.53  40
+<input type="checkbox" name="Obj" value="q9670">(529670) (529670)            Apo  10.9/+25/19.2/074/03.07  *2021 Nov.  7  703  20.66G  2    6  1.48 0.40  44
+<input type="checkbox" name="Obj" value="q8507">(528507) (528507)            Amo  22.7/-26/19.6/103/00.48  *2021 Nov.  4  703  19.84G  0    4  2.21 0.49   8
+<input type="checkbox" name="Obj" value="q4536">(524536) (524536)            Amo  21.1/+34/20.0/100/00.35  *2021 Oct. 30  C51          0    4  2.17 0.45  21
+<input type="checkbox" name="Obj" value="q3810">(523810) (523810)            Apo  23.1/+10/19.1/123/00.48  *2021 Nov.  9  T05  19.11o  0    9  2.19 0.77  11
+<input type="checkbox" name="Obj" value="q3801">(523801) (523801)            Amo   5.7/+41/19.0/138/00.85   2021 Oct. 16  G96  20.07G  0    5  1.99 0.42   6
+<input type="checkbox" name="Obj" value="q3660">(523660) (523660)            Amo  20.1/+01/19.9/076/01.21   2021 Oct.  1  D29  20.0 R  1    5  2.03 0.47  23
+<input type="checkbox" name="Obj" value="p8771">(518771) (518771)            Amo   8.8/+32/20.0/102/00.82  *2021 Nov.  9  F52  19.64w  0    7  1.79 0.33  29
+<input type="checkbox" name="Obj" value="p8678">(518678) (518678)            Apo  18.5/+36/17.8/072/00.50  *2021 Nov.  9  703          0    5  2.19 0.57  30
+<input type="checkbox" name="Obj" value="p8424">(518424) (518424)            Amo   5.3/+15/19.9/147/00.49  *2021 Nov.  7  G96  19.81G  0    5  2.59 0.54  24
+<input type="checkbox" name="Obj" value="p6396">(516396) (516396)            Amo   4.9/+01/18.3/147/01.39  *2021 Nov.  9  F52  19.5 w  1    6  1.64 0.29  19
+<input type="checkbox" name="Obj" value="o6459">(506459) (506459)            Apo   9.3/-45/18.8/075/00.27   2021 Aug.  3  T08  18.47c  0    8  1.04 0.13  23
+<input type="checkbox" name="Obj" value="o4074">(504074) (504074)            Apo   4.5/-76/19.9/084/00.37   2021 Mar. 19  G96  17.83G  0    9  1.05 0.49  55
+<input type="checkbox" name="Obj" value="o3871">(503871) (503871)            Apo  22.8/+01/19.7/115/00.93  *2021 Nov.  7  F51  19.77w  0   10  1.54 0.39  38
+<input type="checkbox" name="Obj" value="o1878">(501878) (501878)            Apo   6.7/-18/18.6/115/00.96  *2021 Oct. 31  T05  19.05o  0    5  2.26 0.76  18
+<input type="checkbox" name="Obj" value="n9307">(499307) (499307)            Amo   3.7/+05/19.5/164/00.34  *2021 Nov.  9  G96  19.41G  0    4  2.52 0.56   7
+<input type="checkbox" name="Obj" value="n5102">(495102) (495102)            Apo   9.6/+12/20.0/085/01.50  *2021 Oct. 31  G96  20.34G  0    8  1.83 0.48  10
+<input type="checkbox" name="Obj" value="m2533">(482533) (482533)            Ate   3.6/+57/20.0/140/01.40  *2021 Nov.  2  G96  19.91G  1    5  0.79 0.80  20
+<input type="checkbox" name="Obj" value="m2391">(482391) (482391)            Amo   8.4/+11/19.6/103/00.92  *2021 Nov.  8  G96  19.62G  0    4  1.85 0.36   6
+<input type="checkbox" name="Obj" value="m2049">(482049) (482049)            Amo   3.2/+05/19.6/167/01.27  *2021 Nov.  7  F52  20.00w  0    5  1.43 0.19  60
+<input type="checkbox" name="Obj" value="l5665">(475665) (475665)            Amo   8.2/+14/19.5/107/00.67  *2021 Nov.  8  G96  19.62G  0    3  2.92 0.61   5
+<input type="checkbox" name="Obj" value="l5462">(475462) (475462)            Amo   0.5/+23/19.7/144/00.35  *2021 Nov.  8  F51  19.28w  0    6  1.83 0.40   9
+<input type="checkbox" name="Obj" value="l1108">(471108) (471108)            Amo   6.5/-44/20.0/103/00.34  *2021 Oct. 29  W94  19.4 G  0    5  1.80 0.35  20
+<input type="checkbox" name="Obj" value="k8861">(468861) (468861)            Cen  12.9/+50/19.0/073/00.05   2021 July  7  T08  19.03o  1    8189.71 0.95 125
+<input type="checkbox" name="Obj" value="j4177">(454177) (454177)            Amo   0.1/+81/18.8/113/00.25  *2021 Nov.  8  T08  17.69o  0    8  2.14 0.49  41
+<input type="checkbox" name="Obj" value="j3707">(453707) (453707)            Apo  11.9/+65/18.8/090/01.32  *2021 Nov.  9  703  18.89G  0    6  1.13 0.23  31
+<input type="checkbox" name="Obj" value="i7178">(447178) (447178)            Cen   6.3/-12/20.0/124/00.04   2021 Feb. 17  F52  19.74w  3   17 28.70 0.52  35
+<input type="checkbox" name="Obj" value="i2742">(442742) (442742)            Amo   0.4/+16/17.7/141/01.07  *2021 Nov.  9  T05  17.59o  0    5  2.10 0.38  23
+<input type="checkbox" name="Obj" value="h9877">(439877) (439877)            Apo   7.4/+14/19.9/117/00.85  *2021 Nov.  8  G96  20.07G  1    4  1.24 0.37  22
+<input type="checkbox" name="Obj" value="h8429">(438429) (438429)            Amo  22.5/-02/20.0/109/00.97  *2021 Nov.  5  F52  19.72w  0    6  2.10 0.45   4
+<input type="checkbox" name="Obj" value="h7994">(437994) (437994)            Apo  10.8/-15/19.3/061/01.15  *2021 Nov.  8  T05  19.19c  0    6  3.28 0.70  20
+<input type="checkbox" name="Obj" value="h6568">(436568) (436568)            Apo  19.4/-58/19.1/063/00.32   2021 July 19  W84          1    5  2.37 0.70  30
+<input type="checkbox" name="Obj" value="g9382">(429382) (429382)            Amo   9.5/+13/19.9/088/00.54  *2021 Nov.  7  F51  20.06w  0    5  2.35 0.53   3
+<input type="checkbox" name="Obj" value="f6224">(416224) (416224)            Amo   3.2/-08/19.9/154/00.44  *2021 Nov.  8  703  20.39G  0    8  1.79 0.38  20
+<input type="checkbox" name="Obj" value="f6195">(416195) (416195)            Apo  13.4/+63/19.5/082/01.37  *2021 Oct. 30  703  18.81G  0    6  1.08 0.16  27
+<input type="checkbox" name="Obj" value="f5713">(415713) (415713)            Ate   9.0/+03/18.6/092/01.08  *2021 Nov.  8  T05  18.90c  2    8  0.74 0.37   7
+<input type="checkbox" name="Obj" value="f0195">(410195) (410195)            Amo   7.4/+16/18.7/118/00.84  *2021 Nov.  7  G96  19.14G  0    5  2.29 0.47   4
+<input type="checkbox" name="Obj" value="c6847">(386847) (386847)            Apo   6.8/+36/19.4/127/00.28  *2021 Nov.  9  F51  19.26w  0   10  1.69 0.46   6
+<input type="checkbox" name="Obj" value="c6504">(386504) (386504)            Apo   1.4/-19/19.1/135/00.78  *2021 Nov.  7  T05  18.54c  0    7  1.44 0.56  13
+<input type="checkbox" name="Obj" value="c5186">(385186) (385186)            Amo  10.6/+14/19.8/072/00.80   2021 Oct. 15  703  19.66G  0   10  1.11 0.08  24
+<input type="checkbox" name="Obj" value="c0636">(380636) (380636)            Ate   5.0/-25/18.9/128/00.76  *2021 Nov.  9  T08  18.68o  0    7  0.93 0.27  11
+<input type="checkbox" name="Obj" value="b7732">(377732) (377732)            Apo   4.6/-17/19.7/138/00.36  *2021 Nov.  8  F52  19.54w  0    5  1.93 0.62  24
+<input type="checkbox" name="Obj" value="b4855">(374855) (374855)            Apo   8.7/+15/18.0/100/03.71  *2021 Nov.  9  F51  19.2 w  2    8  1.10 0.45  17
+<input type="checkbox" name="Obj" value="a3617">(363617) (363617)            Apo  10.7/-46/19.8/061/01.54   2020 Aug. 16  F51  21.3 w  0    7  1.47 0.58  42
+<input type="checkbox" name="Obj" value="a3505">(363505) (363505)            Ate   9.2/+06/18.5/090/00.71  *2021 Nov.  9  G96  18.52G  0   13  0.78 0.34   4
+<input type="checkbox" name="Obj" value="Z6285">(356285) (356285)            Amo   8.4/-21/19.3/091/00.75  *2021 Nov.  4  T05  19.28c  0    7  2.11 0.40  24
+<input type="checkbox" name="Obj" value="Z3938">(353938) (353938)            Amo   0.2/+42/17.8/136/00.58  *2021 Nov.  9  703          0    5  2.77 0.56   9
+<input type="checkbox" name="Obj" value="Z1508">(351508) (351508)            Amo   4.3/+01/18.8/154/00.22  *2021 Nov.  9  F52  18.9 w  0    7  1.73 0.26   7
+<input type="checkbox" name="Obj" value="Y8314">(348314) (348314)            Apo  12.3/+40/19.2/069/00.63   2021 Aug. 11  T08  17.65c  0    7  1.19 0.28  30
+<input type="checkbox" name="Obj" value="Y5853">(345853) (345853)            Amo  20.4/-07/19.4/078/00.55   2021 Sep.  5  T05  19.25c  0   12  2.83 0.55  14
+<input type="checkbox" name="Obj" value="Y5813">(345813) (345813)            Apo  19.1/-67/19.9/064/01.07   2021 Feb. 17  F51  21.49w  0   12  1.32 0.33  57
+<input type="checkbox" name="Obj" value="X7053">(337053) (337053)            Apo   6.9/+27/19.7/126/00.93  *2021 Nov.  5  G96  20.11G  1    4  1.73 0.45  31
+<input type="checkbox" name="Obj" value="X3889">(333889) (333889)            Ate  18.6/-72/19.7/063/00.63   2021 Sep. 26  T08  18.00o  0   14  0.82 0.64  53
+<input type="checkbox" name="Obj" value="X2408">(332408) (332408)            Apo   0.5/+44/19.8/138/00.73  *2021 Nov.  9  703  20.04G  1    7  1.40 0.57  38
+<input type="checkbox" name="Obj" value="W9669">(329669) (329669)            Amo  22.0/-05/18.3/102/00.94  *2021 Nov.  8  T05  18.40c  0   11  2.72 0.54   4
+<input type="checkbox" name="Obj" value="W6732">(326732) (326732)            Amo   0.4/-08/19.6/133/00.27  *2021 Nov.  8  T05  19.41c  0    6  2.71 0.57   7
+<input type="checkbox" name="Obj" value="V8160">(318160) (318160)            Amo   7.7/+20/17.6/115/01.00  *2021 Nov.  9  T05  17.88c  0    7  2.26 0.49   1
+<input type="checkbox" name="Obj" value="V7685">(317685) (317685)            Amo   2.5/-37/20.0/123/00.34  *2021 Oct. 31  W94  18.9 G  0    9  1.71 0.31  23
+<input type="checkbox" name="Obj" value="U7161">(307161) (307161)            Amo  23.3/+51/19.2/124/00.49  *2021 Nov.  4  T08  18.88o  0    8  1.49 0.27  24
+<input type="checkbox" name="Obj" value="U6523">(306523) (306523)            Amo   6.5/+29/19.2/132/00.56   2017 Nov. 21  F51  22.1 w  1    5  2.36 0.51  19
+<input type="checkbox" name="Obj" value="U3174">(303174) (303174)            Amo   0.7/+01/19.1/141/00.22  *2021 Nov.  9  F51  18.83w  0   11  2.26 0.45  21
+<input type="checkbox" name="Obj" value="U2156">(302156) (302156)            Apo   1.2/+26/20.0/152/00.81  *2021 Nov.  8  F51  19.90w  0    9  1.27 0.65  30
+<input type="checkbox" name="Obj" value="T7300">(297300) (297300)            Apo  21.3/-33/19.2/083/01.16  *2021 Nov.  5  T08  18.87o  0   11  1.27 0.41  16
+<input type="checkbox" name="Obj" value="T4739">(294739) (294739)            Apo  10.9/+11/18.9/068/01.00  *2021 Nov.  7  703          0    8  1.57 0.41  36
+<input type="checkbox" name="Obj" value="S6079">(286079) (286079)            Ate  23.4/+07/19.3/126/00.50  *2021 Nov.  9  G96  19.22G  0    8  0.91 0.53  31
+<input type="checkbox" name="Obj" value="S5571">(285571) (285571)            Amo  23.3/+29/19.9/128/00.45  *2021 Nov.  8  I41  19.85g  0   10  1.90 0.43  13
+<input type="checkbox" name="Obj" value="S3460">(283460) (283460)            Amo  23.6/+20/18.0/131/00.82  *2021 Nov.  9  T05  17.79o  0    7  2.23 0.46   6
+<input type="checkbox" name="Obj" value="S3457">(283457) (283457)            Amo  22.9/+07/20.0/118/00.75  *2021 Nov.  7  F51  20.04w  0    8  2.23 0.46   6
+<input type="checkbox" name="Obj" value="R7617">(277617) (277617)            Apo  19.8/+08/19.7/074/01.96   2021 Feb. 13  F51  21.67w  0   10  1.52 0.63  16
+<input type="checkbox" name="Obj" value="R7473">(277473) (277473)            Amo   0.4/-47/18.3/105/01.39   2021 Oct. 22  W84  18.2 G  0   11  2.20 0.44  43
+<input type="checkbox" name="Obj" value="Q7337">(267337) (267337)            Apo   8.9/+30/17.8/101/01.30  *2021 Nov.  9  F52  18.5 w  0   12  1.27 0.51  19
+<input type="checkbox" name="Obj" value="Q0277">(260277) (260277)            Ate   7.4/-47/18.7/093/00.55  *2021 Nov.  5  T08  18.27o  0    7  0.90 0.21  19
+<input type="checkbox" name="Obj" value="Q0141">(260141) (260141)            Apo  11.8/+27/19.3/064/01.41  *2021 Nov.  6  703  21.20G  0    7  1.13 0.25  18
+<input type="checkbox" name="Obj" value="P5501">(255501) (255501)            Apo   1.0/+18/19.8/151/00.35  *2021 Nov.  8  D29  19.3 R  0    9  1.68 0.73   5
+<input type="checkbox" name="Obj" value="O9886">(249886) (249886)            Amo   9.8/+41/19.0/094/00.35  *2021 Nov.  9  703  19.13G  0    9  1.48 0.28  23
+<input type="checkbox" name="Obj" value="O8926">(248926) (248926)            Amo  20.6/-18/19.6/078/00.64   2021 Sep. 19  C51          0   10  1.69 0.33  25
+<input type="checkbox" name="Obj" value="O8818">(248818) (248818)            Amo   6.7/+28/16.7/129/01.59  *2021 Nov.  9  T05  16.84c  0   10  1.67 0.29  29
+<input type="checkbox" name="Obj" value="O2708">(242708) (242708)            Apo   3.9/+19/19.3/167/00.35  *2021 Nov.  8  D29  18.8 R  0    8  2.50 0.70   1
+<input type="checkbox" name="Obj" value="O2187">(242187) (242187)            Amo   3.2/+21/18.3/176/00.34  *2021 Nov.  9  T05  18.47c  0    6  2.35 0.48   6
+<input type="checkbox" name="Obj" value="O1370">(241370) (241370)            Amo   7.3/+04/18.9/116/00.43  *2021 Nov.  8  703  19.12G  0   11  1.68 0.39  17
+<input type="checkbox" name="Obj" value="N7805">(237805) (237805)            Amo  18.9/+48/18.7/083/00.40  *2021 Nov.  7  130  18.2 G  0   14  1.60 0.34  35
+<input type="checkbox" name="Obj" value="N5756">(235756) (235756)            Apo   5.2/-52/19.8/105/00.63  *2021 Oct. 30  T05  19.10o  0    8  1.13 0.26  39
+<input type="checkbox" name="Obj" value="N4061">(234061) (234061)            Amo   2.7/+10/20.0/171/00.35  *2021 Nov.  9  G96  19.79G  0    8  2.36 0.57   8
+<input type="checkbox" name="Obj" value="N0965">(230965) (230965)            TNO   8.2/+46/20.0/111/00.01   2021 Oct. 18  F52  19.41i  2   18 46.91 0.24  38
+<input type="checkbox" name="Obj" value="M9762">(229762) (229762)            Cen   5.2/+03/19.8/146/00.02  *2021 Nov.  8  F51  19.55w  3   22 73.14 0.49  23
+<input type="checkbox" name="Obj" value="M5416">(225416) (225416)            Apo   5.6/+24/19.3/144/00.49   2020 Jan. 26  G96  21.3 G  0   16  1.42 0.83  38
+<input type="checkbox" name="Obj" value="M2869">(222869) (222869)            Apo  21.6/-23/19.5/091/01.18  *2021 Nov.  5  T08  18.59o  0    7  1.80 0.54  34
+<input type="checkbox" name="Obj" value="L9071">(219071) (219071)            Apo  10.2/-11/19.1/070/01.14  *2021 Nov.  4  T05  19.13c  0   12  1.05 0.28  20
+<input type="checkbox" name="Obj" value="L1914">(211914) (211914)            Amo  11.7/+21/19.9/062/00.99   2009 Mar. 28  G96  20.0 V  0    4  2.60 0.60  19
+<input type="checkbox" name="Obj" value="J9003">(199003) (199003)            Ate  20.1/+39/18.9/091/00.73  *2021 Oct. 27  T08  18.86o  0    7  0.96 0.15  22
+<input type="checkbox" name="Obj" value="I9011">(189011) (189011)            Amo  21.3/+23/19.6/100/01.02  *2021 Nov.  7  G96  19.28G  0   10  1.50 0.23  19
+<input type="checkbox" name="Obj" value="I7026">(187026) (187026)            Ate  18.8/+04/18.9/060/01.11   2021 Feb. 23  703  19.08G  0    9  0.96 0.14  30
+<input type="checkbox" name="Obj" value="H0903">(170903) (170903)            Apo   8.2/+17/19.4/107/00.82  *2021 Nov.  8  F51  19.62w  1   11  1.34 0.60   8
+<input type="checkbox" name="Obj" value="H0891">(170891) (170891)            Amo   7.8/+37/18.7/115/00.56  *2021 Nov. 10  F52  18.74w  0   13  1.98 0.41   8
+<input type="checkbox" name="Obj" value="G4217">(164217) (164217)            Amo  20.2/-44/19.9/068/00.79   2021 Sep. 10  G96  20.45G  0    9  2.01 0.42  49
+<input type="checkbox" name="Obj" value="G3899">(163899) (163899)            Ate  12.3/+68/15.8/090/00.50  *2021 Nov.  1  557          0   12  0.83 0.21   9
+<input type="checkbox" name="Obj" value="G3696">(163696) (163696)            Apo   9.2/+26/17.3/095/01.04  *2021 Nov. 10  F51  17.87w  0   16  1.57 0.52  30
+<input type="checkbox" name="Obj" value="G3454">(163454) (163454)            Apo  12.2/+71/19.9/093/00.99   2017 Oct. 15  G96  21.0 G  2    7  1.16 0.37  23
+<input type="checkbox" name="Obj" value="G2463">(162463) (162463)            Apo  20.2/-60/18.7/069/00.61   2021 Aug. 19  C51          0   11  1.15 0.24  22
+<input type="checkbox" name="Obj" value="G2273">(162273) (162273)            Amo   1.5/+22/18.6/158/00.50  *2021 Nov.  9  T05  18.39c  0   15  1.59 0.24  20
+<input type="checkbox" name="Obj" value="G2186">(162186) (162186)            Amo  20.1/-10/19.5/073/00.46  *2021 Nov.  2  T08  18.56o  0   13  2.71 0.61  28
+<input type="checkbox" name="Obj" value="G2149">(162149) (162149)            Amo   5.7/+31/18.1/141/00.23  *2021 Nov.  9  T05  18.38c  0   12  1.87 0.40  12
+<input type="checkbox" name="Obj" value="G2142">(162142) (162142)            Ate   8.7/+43/18.4/105/01.60  *2021 Nov.  9  703  18.66G  0   10  0.88 0.32  22
+<input type="checkbox" name="Obj" value="G1995">(161995) (161995)            Amo  22.7/-47/19.9/093/00.83   2021 Aug.  1  T08  18.73c  0   10  2.29 0.48  25
+<input type="checkbox" name="Obj" value="G1989">(161989) (161989)            Apo   8.1/-23/19.2/095/00.43   2021 Oct.  3  T05  18.98o  0    8  1.12 0.21  26
+<input type="checkbox" name="Obj" value="F9857">(159857) (159857)            Apo   9.0/+12/14.3/095/02.80  *2021 Nov.  9  T05  13.68c  0   12  2.26 0.59  23
+<input type="checkbox" name="Obj" value="F9635">(159635) (159635)            Amo   9.6/-09/20.0/080/00.69  *2021 Nov.  4  703  20.48G  0   12  1.70 0.32  16
+<input type="checkbox" name="Obj" value="F9399">(159399) (159399)            Amo   6.5/-23/19.1/114/00.71  *2021 Nov.  7  T05  19.23c  0   12  1.53 0.21  42
+<input type="checkbox" name="Obj" value="F5334">(155334) (155334)            Amo   3.4/+26/19.6/169/00.35  *2021 Nov.  9  703  19.61G  0   13  2.03 0.41   7
+<input type="checkbox" name="Obj" value="F5140">(155140) (155140)            Apo   0.7/+18/20.0/147/00.48  *2021 Nov.  8  F51  19.93w  0   16  1.27 0.87  29
+<input type="checkbox" name="Obj" value="F4555">(154555) (154555)            Apo  11.3/+40/18.4/077/00.84  *2021 Nov.  9  703  18.66G  0   13  1.18 0.58  37
+<input type="checkbox" name="Obj" value="F3591">(153591) (153591)            Amo   4.1/+41/17.2/153/00.27  *2021 Nov.  8  T08  17.00o  0   16  1.99 0.48   7
+<input type="checkbox" name="Obj" value="F2742">(152742) (152742)            Ate  12.8/+49/19.0/073/02.93   2019 Feb.  9  703  19.6 G  0   16  0.88 0.74  13
+<input type="checkbox" name="Obj" value="E5452">(145452) (145452)            TNO  23.1/+01/20.0/119/00.01  *2021 Nov.  7  F52  19.72w  1   28 41.85 0.03  19
+<input type="checkbox" name="Obj" value="E3649">(143649) (143649)            Apo  17.7/+35/19.1/064/00.17  *2021 Nov.  9  703  18.72G  0    9  1.09 0.19  62
+<input type="checkbox" name="Obj" value="E2781">(142781) (142781)            Amo  21.5/+28/18.9/104/00.63  *2021 Nov.  7  130  18.4 G  0   15  1.95 0.39  41
+<input type="checkbox" name="Obj" value="E0333">(140333) (140333)            Ate   1.4/+46/19.3/144/00.98  *2021 Nov.  9  703  18.94G  0   11  0.96 0.48  19
+<input type="checkbox" name="Obj" value="D8947">(138947) (138947)            Apo  21.3/+14/19.7/097/01.09  *2021 Nov.  8  G96  19.40G  0    7  1.12 0.25  13
+<input type="checkbox" name="Obj" value="D8937">(138937) (138937)            Apo   9.9/-27/18.6/070/01.04   2021 July  6  F51  19.75w  0   14  2.07 0.68  32
+<input type="checkbox" name="Obj" value="D8893">(138893) (138893)            Apo   0.6/+40/19.2/140/00.84  *2021 Nov.  9  703  19.94G  0   18  1.17 0.74  18
+<input type="checkbox" name="Obj" value="D8852">(138852) (138852)            Apo   2.0/-44/18.2/115/03.49   2021 Jan.  7  F52  20.9 w  0   12  1.00 0.30  22
+<input type="checkbox" name="Obj" value="D8205">(138205) (138205)            Apo   4.6/+39/17.7/150/00.36  *2021 Nov.  8  T08  17.53o  0   15  2.58 0.61  11
+<input type="checkbox" name="Obj" value="D8175">(138175) (138175)            Apo   9.2/+29/20.0/096/00.42  *2021 Nov. 10  F51  20.7 w  0   22  1.00 0.29   5
+<input type="checkbox" name="Obj" value="D8155">(138155) (138155)            Amo  10.7/-14/19.9/063/00.77   2020 Aug. 17  F52  21.2 w  0   16  1.81 0.32  25
+<input type="checkbox" name="Obj" value="D8013">(138013) (138013)            Apo   8.9/+00/19.6/092/00.14  *2021 Nov.  6  F51  19.47w  0   20  1.60 0.63  16
+<input type="checkbox" name="Obj" value="D7805">(137805) (137805)            Ate  10.4/+38/18.6/086/00.38  *2021 Nov.  9  703  18.53G  0   17  0.83 0.56  17
+<input type="checkbox" name="Obj" value="D7099">(137099) (137099)            Apo   7.6/-05/19.6/110/00.38   2021 May  24  G96  20.40G  0   14  1.10 0.46  29
+<input type="checkbox" name="Obj" value="D7084">(137084) (137084)            Apo  10.1/+01/19.9/075/00.58   2021 Oct. 13  F52  20.49w  0   18  1.21 0.50  27
+<input type="checkbox" name="Obj" value="D7062">(137062) (137062)            Apo   4.2/+31/17.2/159/00.72  *2021 Nov.  9  T05  17.55c  0   14  1.22 0.32  23
+<input type="checkbox" name="Obj" value="D6199">(136199) (136199)            Cen   1.7/-01/18.8/153/00.01  *2021 Nov.  9  F51  18.56w  3   29 68.01 0.43  44
+<input type="checkbox" name="Obj" value="D4340">(134340) (134340)            TNO  19.8/-21/15.1/066/00.02   2021 Sep.  9  I41  15.06g  0   96 39.80 0.25  17
+<input type="checkbox" name="Obj" value="A5140">(105140) (105140)            Ate  20.1/+16/18.4/081/00.49   2021 Oct. 24  T05  18.40o  0   22  0.91 0.82  33
+<input type="checkbox" name="Obj" value="A0756">(100756) (100756)            Amo   7.6/-07/17.0/108/01.23  *2021 Nov.  8  T05  16.86c  0   13  2.27 0.55  12
+<input type="checkbox" name="Obj" value="96189"> (96189) (96189)             Amo   0.7/+28/19.9/146/00.26  *2021 Nov.  6  I41  20.15g  0   15  1.82 0.31  14
+<input type="checkbox" name="Obj" value="90482"> (90482) (90482)             TNO  10.5/-10/19.3/066/00.01   2021 June 11  T08  19.53c  1   27 39.11 0.23  21
+<input type="checkbox" name="Obj" value="88263"> (88263) (88263)             Amo   2.8/+28/15.4/168/01.23  *2021 Nov.  9  T05  15.14c  0   14  2.10 0.43  39
+<input type="checkbox" name="Obj" value="87684"> (87684) (87684)             Ate   9.9/-26/17.3/071/01.88  *2021 Nov.  9  T08  16.76o  0   19  0.86 0.64  19
+<input type="checkbox" name="Obj" value="87311"> (87311) (87311)             Apo   9.4/+02/18.1/085/01.34  *2021 Nov.  6  T08  17.96o  0   24  1.59 0.51   8
+<input type="checkbox" name="Obj" value="87024"> (87024) (87024)             Apo   3.0/+21/15.5/176/01.51  *2021 Nov.  9  T05  15.77c  0   10  1.20 0.19  14
+<input type="checkbox" name="Obj" value="86324"> (86324) (86324)             Amo   9.7/+29/18.6/090/00.32  *2021 Nov. 10  F51  18.34w  0    9  1.97 0.43  35
+<input type="checkbox" name="Obj" value="86067"> (86067) (86067)             Amo  22.2/-46/19.1/088/00.32   2021 Oct. 23  F52  18.44i  0   13  1.82 0.32  31
+<input type="checkbox" name="Obj" value="85839"> (85839) (85839)             Amo  23.9/-02/19.5/128/00.10  *2021 Nov.  8  T05  19.35c  0   13  1.65 0.25   9
+<input type="checkbox" name="Obj" value="85818"> (85818) (85818)             Apo  20.3/+49/19.9/096/00.47   2021 Oct. 23  G96  19.72G  0   17  1.66 0.42  63
+<input type="checkbox" name="Obj" value="85804"> (85804) (85804)             Amo  10.8/-01/18.5/064/00.91  *2021 Nov.  8  T05  18.82c  0   19  1.72 0.35  28
+<input type="checkbox" name="Obj" value="85709"> (85709) (85709)             Amo  22.6/-06/19.5/109/00.23  *2021 Nov.  8  703  19.06G  0   14  1.65 0.34  25
+<input type="checkbox" name="Obj" value="85628"> (85628) (85628)             Amo   8.7/+20/17.8/100/01.27  *2021 Nov.  9  T05  18.04c  0   13  1.59 0.33  13
+<input type="checkbox" name="Obj" value="84922"> (84922) (84922)             TNO   5.8/+33/19.7/140/00.02   2021 Jan. 11  G37          2   21 39.35 0.08  15
+<input type="checkbox" name="Obj" value="68548"> (68548) (68548)             Apo   8.8/+35/19.8/103/00.06  *2021 Nov.  4  G96  19.81G  0   12  1.71 0.44  23
+<input type="checkbox" name="Obj" value="68350"> (68350) (68350)             Amo   9.8/-07/18.4/077/00.73  *2021 Nov.  6  T08  18.69o  0   15  1.67 0.25  30
+<input type="checkbox" name="Obj" value="68216"> (68216) (68216)             Apo  20.1/-25/18.3/070/00.82  *2021 Nov.  5  T08  18.06o  0   10  1.32 0.33  18
+<input type="checkbox" name="Obj" value="68063"> (68063) (68063)             Amo  23.6/+16/15.9/131/00.60  *2021 Nov.  9  T05  15.43o  0   18  2.33 0.46   6
+<input type="checkbox" name="Obj" value="68031"> (68031) (68031)             Amo   6.5/-11/19.0/121/00.22   2021 Oct. 14  F52  19.72w  0   10  1.38 0.13  15
+<input type="checkbox" name="Obj" value="67399"> (67399) (67399)             Apo   0.3/+33/20.0/140/00.38  *2021 Nov.  5  G96  20.43G  0   14  1.30 0.35  15
+<input type="checkbox" name="Obj" value="66146"> (66146) (66146)             Ate  20.5/-26/16.6/075/00.79  *2021 Nov.  5  T08  16.12o  0   21  0.79 0.48   5
+<input type="checkbox" name="Obj" value="60558"> (60558) (60558)             Cen   6.7/+19/19.8/128/00.04  *2021 Oct. 29  Q21  19.6 V  0   22 10.72 0.46   4
+<input type="checkbox" name="Obj" value="55637"> (55637) (55637)             TNO   3.2/+09/19.9/172/00.02  *2021 Nov.  9  F51  19.63w  2   23 42.72 0.14  19
+<input type="checkbox" name="Obj" value="55636"> (55636) (55636)             TNO   1.6/+37/20.0/152/00.02  *2021 Nov.  6  I41  20.14g  2   26 43.42 0.13  26
+<input type="checkbox" name="Obj" value="55532"> (55532) (55532)             Apo  22.2/-58/20.0/084/00.52   2021 Sep.  2  247          0   12  1.79 0.70  39
+<input type="checkbox" name="Obj" value="54789"> (54789) (54789)             Amo  10.5/+01/17.9/070/00.83  *2021 Nov.  8  F52  17.46w  0   18  1.78 0.29  24
+<input type="checkbox" name="Obj" value="54686"> (54686) (54686)             Amo  20.9/-26/19.4/081/00.52  *2021 Nov.  4  703  18.50G  0   15  1.78 0.34  33
+<input type="checkbox" name="Obj" value="54598"> (54598) (54598)             Cen   5.6/+45/19.2/138/00.04  *2021 Nov.  8  T08  19.16o  0   26 16.47 0.20  21
+<input type="checkbox" name="Obj" value="53110"> (53110) (53110)             Amo   1.5/-56/19.9/104/00.44   2021 Sep.  9  W94  19.7 G  0   13  1.64 0.21  41
+<input type="checkbox" name="Obj" value="52750"> (52750) (52750)             Apo  21.4/-39/17.3/083/00.23  *2021 Nov.  9  T08  17.02o  0   19  1.43 0.52  11
+<input type="checkbox" name="Obj" value="52387"> (52387) (52387)             Amo  11.0/+15/19.8/068/01.04   2021 June 30  G96  20.79G  0   15  1.28 0.19  24
+<input type="checkbox" name="Obj" value="47171"> (47171) (47171)             TNO   3.1/+11/19.9/173/00.03  *2021 Nov.  9  F51  19.67w  1   23 39.55 0.23   8
+<input type="checkbox" name="Obj" value="44594"> (44594) (44594)             Cen   1.8/+13/19.7/161/00.04  *2021 Nov.  9  D29  18.5 R  1   22 32.50 0.46   3
+<input type="checkbox" name="Obj" value="42286"> (42286) (42286)             Apo   2.3/-01/18.6/158/00.52  *2021 Nov. 10  F52  18.56w  0   12  1.42 0.39  24
+<input type="checkbox" name="Obj" value="39796"> (39796) (39796)             Amo   7.1/+04/19.4/120/00.11  *2021 Oct. 31  T05  19.16o  0   19  2.25 0.47  13
+<input type="checkbox" name="Obj" value="36284"> (36284) (36284)             Apo  11.2/+12/19.2/064/00.43   2021 Oct. 16  I41  19.27r  0   18  1.48 0.55  47
+<input type="checkbox" name="Obj" value="36236"> (36236) (36236)             Apo   8.1/-28/19.3/093/00.73   2021 Feb. 11  I41  18.74r  0   16  1.33 0.42  58
+<input type="checkbox" name="Obj" value="35396"> (35396) (35396)             Apo  19.8/-19/18.0/067/01.96   2021 June 12  G96  20.16G  0   15  1.44 0.48   4
+<input type="checkbox" name="Obj" value="34613"> (34613) (34613)             Amo   2.5/+25/19.9/169/00.29  *2021 Nov.  9  F52  20.11w  0   18  2.07 0.39   6
+<input type="checkbox" name="Obj" value="32906"> (32906) (32906)             Amo  22.2/+36/16.9/114/00.19  *2021 Nov.  9  T05  16.55o  0   12  2.25 0.44  19
+<input type="checkbox" name="Obj" value="31346"> (31346) (31346)             Amo  20.3/-13/20.0/074/00.94   2021 Aug. 25  T08  19.12o  0   14  2.03 0.43   6
+<input type="checkbox" name="Obj" value="31345"> (31345) (31345)             Amo   7.2/+15/18.4/120/00.25  *2021 Nov.  9  T05  18.92c  0   15  2.02 0.39   7
+<input type="checkbox" name="Obj" value="26663"> (26663) (26663)             Apo   1.5/+41/19.8/149/00.48  *2021 Nov.  6  703  19.85G  0   12  1.55 0.47  14
+<input type="checkbox" name="Obj" value="25330"> (25330) (25330)             Apo   0.4/-10/17.8/132/00.45  *2021 Nov.  8  T05  17.67c  0   15  1.54 0.37  14
+<input type="checkbox" name="Obj" value="25143"> (25143) (25143)             Apo   2.7/+14/19.7/174/00.49  *2021 Nov.  9  F51  19.74w  0   11  1.32 0.28   2
+<input type="checkbox" name="Obj" value="22771"> (22771) (22771)             Apo   5.0/+45/19.1/143/00.42   2021 July  8  I41  19.05r  0   21  1.58 0.52  11
+<input type="checkbox" name="Obj" value="22753"> (22753) (22753)             Apo   5.5/+30/18.9/144/00.57  *2021 Nov.  5  G96  18.88G  0   20  1.22 0.57   3
+<input type="checkbox" name="Obj" value="20460"> (20460) (20460)             Amo   8.4/+29/18.5/107/00.28  *2021 Nov.  9  T05  18.56c  0   18  1.88 0.41  34
+<input type="checkbox" name="Obj" value="20429"> (20429) (20429)             Apo   2.8/+13/19.9/174/00.42  *2021 Nov.  8  D29  19.9 R  0   16  1.56 0.46   6
+<input type="checkbox" name="Obj" value="18882"> (18882) (18882)             Amo   8.7/+54/18.7/107/00.16  *2021 Nov.  9  703  19.07G  0   16  1.68 0.23  37
+<input type="checkbox" name="Obj" value="17511"> (17511) (17511)             Apo   8.9/+38/18.6/102/00.81  *2021 Nov.  9  703  18.96G  0   12  1.19 0.36  10
+<input type="checkbox" name="Obj" value="17181"> (17181) (17181)             Apo   9.4/+02/17.6/086/01.84  *2021 Nov.  8  T05  18.03c  0   11  2.37 0.67  11
+<input type="checkbox" name="Obj" value="16960"> (16960) (16960)             Apo  20.6/+12/15.7/087/00.89  *2021 Nov.  9  T05  16.04o  0   21  2.20 0.86  18
+<input type="checkbox" name="Obj" value="16816"> (16816) (16816)             Apo   0.8/-05/19.6/139/00.34  *2021 Nov.  8  F52  19.58w  0   18  1.44 0.60  26
+<input type="checkbox" name="Obj" value="16636"> (16636) (16636)             Amo  22.5/+08/19.8/113/00.84  *2021 Nov.  9  G96  19.26G  0    6  2.31 0.47   7
+<input type="checkbox" name="Obj" value="12923"> (12923) (12923)             Apo  23.8/-10/16.3/124/00.81  *2021 Nov.  9  T08  15.92o  0   18  1.96 0.49   5
+<input type="checkbox" name="Obj" value="12711"> (12711) (12711)             Apo   9.8/+39/18.5/093/00.29  *2021 Nov.  9  703          0   16  1.19 0.27  38
+<input type="checkbox" name="Obj" value="11405"> (11405) (11405)             Apo   9.8/+00/18.6/079/00.56  *2021 Nov.  8  T05  19.25c  0   15  1.46 0.39  23
+<input type="checkbox" name="Obj" value="11311"> (11311) (11311)             Apo  10.9/+32/19.8/077/00.41  *2021 Nov.  9  703  19.59G  0   15  2.12 0.54  25
+<input type="checkbox" name="Obj" value="11284"> (11284) (11284)             Amo  24.0/+04/19.7/133/00.15  *2021 Nov.  9  G96  19.43G  0   12  1.74 0.34   2
+<input type="checkbox" name="Obj" value="10199"> (10199) (10199)             Cen  20.1/-19/19.2/072/00.03   2021 Oct.  6  T05  18.85o  0   25 15.83 0.17  23
+<input type="checkbox" name="Obj" value="10165"> (10165) (10165)             Apo  18.5/+48/18.2/080/01.45  *2021 Nov.  9  703  17.85G  0   15  1.23 0.50  24
+<input type="checkbox" name="Obj" value="09202">  (9202) (9202)              Apo  14.8/+60/17.7/078/00.89   2021 Sep. 15  T05  19.21c  0   18  1.42 0.61  41
+<input type="checkbox" name="Obj" value="08201">  (8201) (8201)              Apo   3.1/+04/19.8/167/00.32  *2021 Nov.  7  F52  19.85w  0   19  2.54 0.71  10
+<input type="checkbox" name="Obj" value="07889">  (7889) (7889)              Apo  20.5/-67/17.2/071/00.34   2021 Sep. 10  C51          0   16  1.26 0.35  37
+<input type="checkbox" name="Obj" value="07822">  (7822) (7822)              Apo  10.2/-51/18.9/066/00.37   2021 Sep.  6  T08  17.19o  0   13  1.12 0.16  37
+<input type="checkbox" name="Obj" value="07482">  (7482) (7482)              Apo   7.1/-37/18.2/100/00.34  *2021 Nov.  9  T08  17.96o  0   16  1.35 0.33  33
+<input type="checkbox" name="Obj" value="07358">  (7358) (7358)              Amo   7.7/+23/16.5/116/00.08  *2021 Nov.  9  T05  16.23c  0   22  2.20 0.50   5
+<input type="checkbox" name="Obj" value="07341">  (7341) (7341)              Apo  23.0/+15/16.5/121/00.39  *2021 Nov.  9  T05  16.07o  0   12  1.84 0.51   5
+<input type="checkbox" name="Obj" value="06455">  (6455) (6455)              Apo  12.4/+28/19.6/060/00.32   2021 Oct. 16  I41  19.59r  0   25  2.24 0.57  37
+<input type="checkbox" name="Obj" value="06050">  (6050) (6050)              Amo  10.7/+13/19.7/071/00.30  *2021 Nov.  3  703  19.97G  0   22  2.20 0.44   6
+<input type="checkbox" name="Obj" value="05751">  (5751) (5751)              Amo  24.0/-21/19.1/120/00.11  *2021 Nov.  6  F51  18.93w  0   22  2.10 0.42  16
+<input type="checkbox" name="Obj" value="05653">  (5653) (5653)              Amo  10.4/+19/18.7/077/00.88  *2021 Nov.  7  T08  18.48o  0   23  1.79 0.30   7
+<input type="checkbox" name="Obj" value="05587">  (5587) (5587)              Amo   7.3/+01/20.0/115/00.10   2021 Feb.  7  G96  20.33G  0   25  2.40 0.54  18
+<input type="checkbox" name="Obj" value="05332">  (5332) (5332)              Amo  10.7/-05/17.4/065/00.79  *2021 Nov.  8  T05  17.36c  0   23  2.16 0.46  26
+<input type="checkbox" name="Obj" value="05189">  (5189) (5189)              Apo   5.2/+15/19.3/149/00.48  *2021 Nov.  8  G96  19.61G  0   18  1.55 0.48   4
+<input type="checkbox" name="Obj" value="05143">  (5143) (5143)              Apo  10.1/+39/14.2/089/02.96  *2021 Nov.  9  703  15.17G  0   29  1.83 0.77   9
+<input type="checkbox" name="Obj" value="05131">  (5131) (5131)              Apo   4.8/-28/18.4/128/00.39  *2021 Nov.  7  T05  18.28c  0   28  1.49 0.57  36
+<input type="checkbox" name="Obj" value="04954">  (4954) (4954)              Amo  20.3/-23/15.4/074/00.63  *2021 Nov.  9  T08  14.60o  0   25  2.00 0.45  17
+<input type="checkbox" name="Obj" value="04660">  (4660) (4660)              Apo   3.1/+30/14.9/167/00.44  *2021 Nov.  9  T05  15.21c  0   15  1.49 0.36   1
+<input type="checkbox" name="Obj" value="04596">  (4596) (4596)              Amo  19.5/-18/19.6/063/00.62   2021 Aug. 15  T08  19.22o  0   17  2.24 0.52  37
+<input type="checkbox" name="Obj" value="04544">  (4544) (4544)              Apo  11.5/+19/19.5/063/00.72  *2021 Nov.  7  703  19.51G  0   12  1.04 0.25  14
+<input type="checkbox" name="Obj" value="04487">  (4487) (4487)              Amo  20.4/-10/19.7/077/00.88   2021 Sep. 11  I41  19.59r  0   18  1.73 0.30  16
+<input type="checkbox" name="Obj" value="04341">  (4341) (4341)              Apo  22.1/-45/16.7/088/00.72  *2021 Nov.  1  T08  16.28o  0   22  1.83 0.68  12
+<input type="checkbox" name="Obj" value="04183">  (4183) (4183)              Apo  21.8/-07/19.9/098/00.07  *2021 Nov.  3  I41  20.18g  0   27  1.98 0.63   7
+<input type="checkbox" name="Obj" value="03691">  (3691) (3691)              Amo   9.1/+44/18.5/102/00.28  *2021 Nov.  9  703  18.67G  0   25  1.77 0.28  20
+<input type="checkbox" name="Obj" value="03361">  (3361) (3361)              Apo   2.7/-13/14.7/149/02.59  *2021 Nov.  8  T05  14.89c  0   17  1.21 0.32   3
+<input type="checkbox" name="Obj" value="03352">  (3352) (3352)              Amo  23.6/-11/18.5/122/00.07  *2021 Nov.  9  T08  18.10o  0   21  1.88 0.37   5
+<input type="checkbox" name="Obj" value="03288">  (3288) (3288)              Amo   3.6/+17/19.0/172/00.30  *2021 Nov.  8  D29  17.8 R  0   27  2.03 0.46   6
+<input type="checkbox" name="Obj" value="03200">  (3200) (3200)              Apo   3.7/+40/17.4/156/00.56  *2021 Nov.  8  T08  17.20o  0   36  1.27 0.89  22
+<input type="checkbox" name="Obj" value="03103">  (3103) (3103)              Apo   9.9/-10/16.8/074/00.56  *2021 Nov.  9  T08  16.30o  0   23  1.40 0.35  21
+<input type="checkbox" name="Obj" value="02340">  (2340) (2340)              Ate   4.0/+08/17.5/164/01.90  *2021 Nov.  9  G96  17.58G  2    9  0.84 0.45   6
+<input type="checkbox" name="Obj" value="02329">  (2329) (2329)              Apo   6.7/-13/18.2/118/00.26  *2021 Nov.  9  T08  17.91o  0   23  2.41 0.65  24
+<input type="checkbox" name="Obj" value="02212">  (2212) (2212)              Apo   4.2/+30/19.0/160/00.25  *2021 Nov.  6  703  19.95G  0   34  2.16 0.84  12
+<input type="checkbox" name="Obj" value="02060">  (2060) (2060)              Cen   0.5/+06/18.7/140/00.03  *2021 Nov.  8  T05  17.88c  0   51 13.70 0.38   7
+<input type="checkbox" name="Obj" value="01943">  (1943) (1943)              Amo  22.7/+04/18.3/115/00.26  *2021 Nov.  8  T05  18.25c  0   23  1.43 0.26   9
+<input type="checkbox" name="Obj" value="01917">  (1917) (1917)              Amo  11.0/-09/19.0/060/00.35   2021 Oct. 11  I41  18.69r  0   29  2.15 0.51  24
+<input type="checkbox" name="Obj" value="01865">  (1865) (1865)              Apo  19.1/-09/20.0/060/00.76   2021 Sep. 23  T08  18.30o  0   26  1.08 0.47  16
+<input type="checkbox" name="Obj" value="01864">  (1864) (1864)              Apo  11.7/+16/19.7/060/00.31  *2021 Nov.  3  703  20.71G  0   32  1.46 0.61  22
+<input type="checkbox" name="Obj" value="01627">  (1627) (1627)              Amo   6.7/+13/16.3/126/00.12  *2021 Nov.  9  T05  16.26c  0   32  1.86 0.40   8
+<input type="checkbox" name="Obj" value="01620">  (1620) (1620)              Apo  10.7/+19/18.5/074/00.64  *2021 Nov.  3  703          0   36  1.25 0.34  13
+<input type="checkbox" name="Obj" value="01036">  (1036) (1036)              Amo  10.4/-13/16.0/066/00.19  *2021 Nov.  8  T05  15.93c  0   61  2.67 0.53  27
+<input type="checkbox" name="Obj" value="00433">   (433) (433)               Amo  19.5/-19/14.4/062/00.51  *2021 Nov.  5  T08  14.11o  0   52  1.46 0.22  11
+
+</pre><center>
+<hr><a name="opt">
+<p>Start date: <input name="d" maxlength="12" size="12" value=""> (YYYY MM DD.dd form)
+</p><p>Number of dates to output: <input name="l" maxlength="3" size="3" value=" 10">
+</p><p>Ephemeris interval: <input name="i" maxlength="3" size="3" value="">
+Ephemeris units: <input type="radio" name="u" value="d" checked=""> days
+  <input type="radio" name="u" value="h"> hours  <input type="radio" name="u" value="m"> minutes
+</p></a><p><a name="opt"></a><a href="https://cgi.minorplanetcenter.net/iau/lists/ObsCodes.html">Observatory code</a>: <input name="c" maxlength="3" size="3" value="">
+</p><p>Display positions in: <input type="radio" name="raty" value="h"> truncated sexagesimal or
+<input type="radio" name="raty" value="a" checked=""> full sexagesimal or
+<input type="radio" name="raty" value="d"> decimal units
+</p><p></p><center><input type="radio" name="s" value="t" checked=""> Total motion and direction
+<input type="radio" name="s" value="s"> Separate R.A. and Decl. motions</center>
+  Display motions as: <input type="radio" name="m" value="m"> "/min  <input type="radio" name="m" value="h" checked=""> "/hr  <input type="radio" name="m" value="d"> °/day
+<p><input type="radio" name="out" value="f" checked=""> Full output <input type="radio" name="out" value="b"> Brief output
+</p><p><input type="submit" value=" Get ephemerides "> <input type="reset" value=" Reset form "></p></center>
+</form>
+<hr><p>
+This document was last updated on
+2021-11-10.76
+ UT
+<!-- Body postamble -->
+      </p></div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer id="footer">
+    <div class="holder">
+      <nav class="nav">
+        <ul>
+          <li><a href="https://cgi.minorplanetcenter.net/">Home</a></li>
+          <li><a href="https://cgi.minorplanetcenter.net/about">About</a></li>
+	  <!-- Contact link changed to Jira -->
+          <li><a href="https://mpc-service.atlassian.net/servicedesk/customer/portals">Contact</a></li>
+          <li><a href="https://www.cfa.harvard.edu/content/privacy-statement">Privacy</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://www.cfa.harvard.edu/">
+      <img src="./Dates Of Last Observation Of Unusual Minor Planets_files/CfA_Logo_Vertical_CMYK.png" width="110" height="47"></a>
+      <p>
+      </p><p>
+      </p><p>
+      </p><div class="copy">The Minor Planet Center is hosted by the Center for Astrophysics | Harvard &amp; Smithsonian.<center>The Minor Planet Center is funded by NASA.</center></div>
+  </div></footer>
+
+<script type="text/javascript">
+  $(window).on('load', (function() {
+    $("table").tablesorter();
+  }));
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var _tag=new WebTrends();
+_tag.dcsGetId();
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+_tag.dcsCustom=function(){
+// Add custom parameters here.
+//_tag.DCSext.param_name=param_value;
+}
+_tag.dcsCollect();
+//]]>
+</script>
+
+<noscript>
+<div><img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="//logs1.smithsonian.museum/dcsa7yzrmbdzpxzrosrn4tyep_5i1d/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=9.4.0&amp;dcssip=www.minorplanetcenter.net"/></div>
+</noscript>
+
+
+
+
+</body></html>
