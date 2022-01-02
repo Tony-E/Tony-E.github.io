@@ -74,15 +74,15 @@ function init() {
  */
 function doFetch() {
    /* URLs for data */
-    let neocpurl = "https://minorplanetcenter.net/iau/NEO/neocp.txt";
-    let unusualurl ="https://minorplanetcenter.net/iau/lists/LastUnusual.html";
-    let priorityurl = "https://thingproxy.freeboard.io/fetch/https://neo.ssa.esa.int/PSDB-portlet/download?file=esa_priority_neo_list";
+    //let neocpurl = "https://minorplanetcenter.net/iau/NEO/neocp.txt";
+    //let unusualurl ="https://minorplanetcenter.net/iau/lists/LastUnusual.html";
+    //let priorityurl = "https://thingproxy.freeboard.io/fetch/https://neo.ssa.esa.int/PSDB-portlet/download?file=esa_priority_neo_list";
                /*priority list must be obtained via a CORS Proxy*/
       
    /* Local copies of data for use during testing */
-    //var neocpurl = "neocp.txt"; 
-    //var unusualurl = "unusuals.txt";
-    //var priorityurl = "priority.txt";
+    var neocpurl = "neocp.txt"; 
+    var unusualurl = "unusuals.txt";
+    var priorityurl = "priority.txt";
     
    /* load the files and call appropriate processors.*/
     comments.value += "Fetching data.\n";
