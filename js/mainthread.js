@@ -80,9 +80,9 @@ function doFetch() {
                /*priority list must be obtained via a CORS Proxy*/
       
    /* Local copies of data for use during testing */
-    var neocpurl = "neocp.txt"; 
-    var unusualurl = "unusuals.txt";
-    var priorityurl = "priority.txt";
+    var neocpurl = "https://tony-e.github.io/neocp.txt"; 
+    var unusualurl = "https://tony-e.github.io/unusuals.txt";
+    var priorityurl = "https://tony-e.github.io/priority.txt";
     
    /* load the files and call appropriate processors.*/
     comments.value += "Fetching data.\n";
