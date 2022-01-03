@@ -52,21 +52,22 @@ function init() {
    /* create an Observatory and set its default position and title in the DOM */
     obs = new Observatory(-70.5,-33.27,"W88", "Chile, La Dehesa");
     obs.setTimes();
-    //document.getElementById("obsname").textContent = obs.name;  
+    document.getElementById("obsname").textContent = obs.name;  
    /* create a Filter and set values from the document */
     filter = new Filter();
     filter.getFilter();
    /* create a cookie handler and show warning */
     let cookie = new Cookie();
-    if (cookie.enabled) {
-        comments.value += "NOTE: A cookie will be written if you use the Filter button, " +
-                      "recording filter settings for 7 days.\n";
-    }
+    
    /* initial announcement */
     comments.value += "Timenow " + now.toString() + "\n";
     let ra = sun.raDec.x / (15*toRadians);
     let dec= sun.raDec.y / toRadians;
     comments.value += "Sun RA/Decl: "+ ra.toFixed(2)+ " hours "+ dec.toFixed(2) + " degrees.\n";
+    if (cookie.enabled) {
+        comments.value += "NOTE: A cookie, recording filter settings for 7 days," +
+                      "will be written if you use the Filter button.\n";
+    }
     doFetch();
 }
 /*****************************************************************************
@@ -74,15 +75,15 @@ function init() {
  */
 function doFetch() {
    /* URLs for data */
-    //let neocpurl = "https://minorplanetcenter.net/iau/NEO/neocp.txt";
-    //let unusualurl ="https://minorplanetcenter.net/iau/lists/LastUnusual.html";
-    //let priorityurl = "https://thingproxy.freeboard.io/fetch/https://neo.ssa.esa.int/PSDB-portlet/download?file=esa_priority_neo_list";
+    let neocpurl = "https://minorplanetcenter.net/iau/NEO/neocp.txt";
+    let unusualurl ="https://minorplanetcenter.net/iau/lists/LastUnusual.html";
+    let priorityurl = "https://thingproxy.freeboard.io/fetch/https://neo.ssa.esa.int/PSDB-portlet/download?file=esa_priority_neo_list";
                /*priority list must be obtained via a CORS Proxy*/
       
    /* Local copies of data for use during testing */
-    var neocpurl = "https://tony-e.github.io/neocp.txt"; 
-    var unusualurl = "https://tony-e.github.io/unusuals.txt";
-    var priorityurl = "https://tony-e.github.io/priority.txt";
+    //var neocpurl = "neocp.txt"; 
+    //var unusualurl = "unusuals.txt";
+    //var priorityurl = "priority.txt";
     
    /* load the files and call appropriate processors.*/
     comments.value += "Fetching data.\n";
