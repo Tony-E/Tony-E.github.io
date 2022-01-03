@@ -78,7 +78,7 @@ function doFetch() {
    /* URLs for data */
     let neocpurl = "https://minorplanetcenter.net/iau/NEO/neocp.txt";
     let unusualurl ="https://minorplanetcenter.net/iau/lists/LastUnusual.html";
-    let priorityurl = "https://api.codetabs.com/v1/proxy?quest=https://neo.ssa.esa.int/PSDB-portlet/download?file=esa_priority_neo_list";
+    let priorityurl = "https://api.codetabs.com/v1/proxy/?quest=https://neo.ssa.esa.int/PSDB-portlet/download?file=esa_priority_neo_list";
                /*priority list must be obtained via a CORS Proxy*/
       
    /* Local copies of data for use during testing */
