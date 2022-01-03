@@ -52,7 +52,8 @@ function init() {
    /* create an Observatory and set its default position and title in the DOM */
     obs = new Observatory(-70.5,-33.27,"W88", "Chile, La Dehesa");
     obs.setTimes();
-    document.getElementById("obsname").textContent = obs.name;  
+    let obname = document.getElementById("obsname");
+    obname.innerHTML = obs.name;  
    /* create a Filter and set values from the document */
     filter = new Filter();
     filter.getFilter();
@@ -350,7 +351,8 @@ function doObservatory() {
         obs = new Observatory(-70.5,-33.27,"W88", "Chile, La Dehesa");
         obs.setTimes();}
    /* set new title in DOM */
-    document.getElementById("obsname").textContent = obs.name;  
+    let obname = document.getElementById("obsname");
+    obname.innerHTML = obs.name;  
    /* Re-do filter and re-show tables */ 
     doFilter();
 }
