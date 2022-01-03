@@ -53,7 +53,7 @@ function init() {
     obs = new Observatory(-70.5,-33.27,"W88", "Chile, La Dehesa");
     obs.setTimes();
     let obname = document.getElementById("obsname");
-    obname.innerHTML = obs.name;  
+    obname.innerHTML = "test";  
    /* create a Filter and set values from the document */
     filter = new Filter();
     filter.getFilter();
