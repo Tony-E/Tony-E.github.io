@@ -52,8 +52,8 @@ function init() {
    /* create an Observatory and set its default position and title in the DOM */
     obs = new Observatory(-70.5,-33.27,"W88", "Chile, La Dehesa");
     obs.setTimes();
-    //let obname = document.getElementById("obsname");
-    //obname.innerHTML = "test";  
+    let obname = document.getElementById("obsname");
+    obname.innerHTML = obs.name;  
    /* create a Filter and set values from the document */
     filter = new Filter();
     filter.getFilter();
@@ -78,7 +78,7 @@ function doFetch() {
    /* URLs for data */
     let neocpurl = "https://minorplanetcenter.net/iau/NEO/neocp.txt";
     let unusualurl ="https://minorplanetcenter.net/iau/lists/LastUnusual.html";
-    let priorityurl = "https://api.codetabs.com/v1/proxy/?quest=https://neo.ssa.esa.int/PSDB-portlet/download?file=esa_priority_neo_list";
+    let priorityurl = "https://api.codetabs.com/v1/proxy?quest=https://neo.ssa.esa.int/PSDB-portlet/download?file=esa_priority_neo_list";
                /*priority list must be obtained via a CORS Proxy*/
       
    /* Local copies of data for use during testing */
@@ -351,8 +351,8 @@ function doObservatory() {
         obs = new Observatory(-70.5,-33.27,"W88", "Chile, La Dehesa");
         obs.setTimes();}
    /* set new title in DOM */
-    //let obname = document.getElementById("obsname");
-    //obname.innerHTML = obs.name;  
+    let obname = document.getElementById("obsname");
+    obname.innerHTML = obs.name;  
    /* Re-do filter and re-show tables */ 
     doFilter();
 }
