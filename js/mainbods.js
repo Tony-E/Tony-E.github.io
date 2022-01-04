@@ -154,11 +154,11 @@ class Filter {
         var cookie = new Cookie();
         if (cookie.enabled) {
             let v = cookie.getCookie("magLimit");
-            if ("x" !== v) this.magLimit = v;
+            if ("x" !== v) {this.magLimit = v;} else {this.magLimit = 19.5;}
             v = cookie.getCookie("altLimit");
-            if ("x" !== v) this.altLimit = v;
+            if ("x" !== v) {this.altLimit = v;} else {this.altLimit = 30;}
             v = cookie.getCookie("uncLimit");
-            if ("x" !== v) this.uncLimit = v;
+            if ("x" !== v) {this.uncLimit = v;} else {this.uncLimit = 1;}
             document.getElementById("mag").value = this.magLimit;
             document.getElementById("alt").value = this.altLimit;
             document.getElementById("unc").value = this.uncLimit; 
