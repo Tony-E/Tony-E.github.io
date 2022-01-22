@@ -18,6 +18,7 @@
  var neocps = [];    // array of NEOCPs    
  var neos = [];      // array of NEOs
  var priorities = [];// array of ESA priority list lines
+ var pccp = [];      // array of lines from pccp page
  
  var toRadians = Math.PI/180;
  var pi2 = Math.PI/2.0;
@@ -31,30 +32,37 @@
  
  var neoLoaded;      // NEO processing complete flag
  var priLoaded;      // Priority list complete flag
+ var pccpLoaded;     // PCCP list completed
  var priCodes = ["Urg","Need","Use","Low"]; //Priority codes
 
 /***************************************************************************
  * Function called on page load initiates main thread.
  **/
 function init() {
-   /* none of the files have been loaded */
+   /* none of the files have been loaded yet*/
     neocpLoaded = false;
     neoLoaded = false;
     priLoaded = false;
+    pccpLoaded = false;
+    
    /* get the comments textarea */
     comments = document.getElementById("comments");
+    
    /* get current date and Julian Day */
     now = new Date();
     JD = (now/86400000) - (now.getTimezoneOffset()/1440) + 2440587.5;
+    
    /* create a Sun and set its position */
     sun = new Sun();          
     sun.setPosition(JD);
+    
    /* create an Observatory and set its default position and title in the DOM */
     obs = new Observatory(-70.5,-33.27,"W88", "Chile, La Dehesa");
     obs.setTimes();
     let obname = document.getElementById("obsName");
-    obname.innerHTML = "<h2>" + obs.name + "</h2>";  
-   /* create a Filter and set values from the document */
+    obname.innerHTML = "<h2>" + obs.name + "</h2>"; 
+    
+   /* create a Filter and set values from cookies or the document */
     filter = new Filter();
     filter.getFilter();
    /* create a cookie handler and show warning */
@@ -79,7 +87,8 @@ function doFetch() {
     let neocpurl = "https://minorplanetcenter.net/iau/NEO/neocp.txt";
     let unusualurl ="https://minorplanetcenter.net/iau/lists/LastUnusual.html";
     let priorityurl = "https://api.codetabs.com/v1/proxy?quest=https://neo.ssa.esa.int/PSDB-portlet/download?file=esa_priority_neo_list";
-               /*priority list must be obtained via a CORS Proxy*/
+    let pccpurl = "https://minorplanetcenter.net/iau/NEO/pccp.txt";
+               /*the priority list must be obtained via a CORS Proxy*/
       
    /* Local copies of data for use during testing */
     //var neocpurl = "neocp.txt"; 
@@ -91,6 +100,7 @@ function doFetch() {
     $.get(neocpurl,function(data){doNeocp(data);});
     $.get(unusualurl,function(data){doUnusuals(data);});
     $.get(priorityurl,function(data){doPriority(data);});
+    $.get(pccpurl,function(data){doPccp(data);});
     // The processing functions are automatically called once the 
     // Fetches have obtained the data.                            
 }
@@ -136,9 +146,26 @@ function doNeocp(neocpData) {
     for (let i = 0; i < neocps.length; i++) {
         neocps[i].checkVisible();
     }
+    /* Wait for PCCP list to be loaded */
+    checkPCCP();
+    
    /* show NEOCP table */
     doTable1();
 }
+/***
+ * Check if priority list available else wait.
+ */
+function checkPCCP() {
+    if (priLoaded){
+        doTable1();
+        return;
+    } else {
+        setTimeout(checkPCCP,500);
+    }
+}
+
+
+
 /***
  *  Show table of neocps 
  **/
@@ -150,7 +177,11 @@ function doTable1(){
         if (neocps[i].visible === true) {
             tabBod+="<tr>";
             tabBod+="<td><input type=\"checkbox\" name=\"Obj\"></td>";
-            tabBod+="<td>" + neocps[i].id + "</td>";
+            if (pccp.includes(neocps[i].id)) {
+                tabBod+="<td>* " + neocps[i].id + "</td>";
+            } else {
+                tabBod+="<td>" + neocps[i].id + "</td>";
+            }              
             tabBod+="<td>" + neocps[i].v + "</td>";
             tabBod+="<td>" + neocps[i].score + "</td>";
             let ra = neocps[i].coord.x/(toRadians * 15);
@@ -228,7 +259,7 @@ function doUnusuals(unusuals) {
     comments.value+= count + " Other objects added.\n";
     neoLoaded = true;
    /* go to check if priority data has arrived yet */
-    checkPriority();   
+    checkPriority(); 
 }
 
 /***
@@ -271,6 +302,15 @@ function doPriority(pdata) {
     priorities = pdata.split("\n");
     priLoaded = true;
 }
+/***********************************************************
+ * Store the PCCP data.
+ * @param {type} pdata data from fetch.
+ */
+function doPccp(pccpData) {
+    pccp = pccpData;
+    pccpLoaded = true;
+}
+
 /***
  * Check if priority list available else wait.
  */
