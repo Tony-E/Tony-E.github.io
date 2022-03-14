@@ -210,7 +210,9 @@ function doEphem1() {
     for (i = 1; i < (rows.length); i++) {
        let sel = rows[i].getElementsByTagName("input")[0]; 
        if (sel.checked) {
-           eText += "&obj=" + rows[i].getElementsByTagName("td")[1].innerHTML;  
+           // get object name and remove "* " if PCCP
+           let xid = rows[i].getElementsByTagName("td")[1].innerHTML; 
+           eText += "&obj=" + xid.replace("* ","");
        }
     }
    /* add dates, times, obs code and final fixed part to query */
