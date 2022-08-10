@@ -26,16 +26,8 @@ var pi2 = 2*Math.PI;
 var YO6 = [0.784513610477560E0, 0.235573213359357E0, -1.17767998417887E0, 1.31518632068391E0];
 
 
-function nodefault(event) {
-  var e = event || window.event;
-      e.preventDefault && e.preventDefault();
-      e.stopPropagation && e.stopPropagation();
-      e.cancelBubble = true;
-      e.returnValue = false;
-      return false;
-   return true;
-}   
-   
+
+
 /*********************************************************************************************
  * Function init called from the webpage reads the definition file and sets up global
  * variables containing the bodies and parameters.
@@ -50,13 +42,13 @@ function init(jdffile) {
     bodies = [];                                 // create array of bodies
     parms = new ParameterSet();                  // create a parameter set
     runTime= new Date();                         // start time is now
-    then = new Date();                           // initialise now
+    then = new Date();                           // initialise then
     
     
    // retrieve and process definition file 
-    var jdftext = httpGet("../jdf/"+jdffile); // get definition file
-    var jdfarray = jdftext.split(/\s+/gm);          // split into tokens 
-    for (var i = 0; i < jdfarray.length; i++) {     // save parameters and body data
+    var jdftext = httpGet("./jdf/"+jdffile);      // get definition file
+    var jdfarray = jdftext.split(/\s+/gm);        // split into tokens 
+    for (var i = 0; i < jdfarray.length; i++) {   // save parameters and body data
         var line = jdfarray[i];
         var pair = line.split(/=/);
         if (pair[0] === "vstep")    parms.vStep = Number(pair[1]); 
@@ -73,39 +65,42 @@ function init(jdffile) {
             parms.julian = Number(pair[1]); 
             runTime.setTime((parms.julian - 2440587.5)*86400000);
         }
-        if (pair[0] === "body")   var b = bodies.push(new JingoBody());
-        if (pair[0] === "name")   bodies[b - 1].name = pair[1];
-        if (pair[0] === "colour") {
-            bodies[b - 1].colour = "#" + pair[1];
-            bodies[b - 1].dColour= shadeColor(pair[1], -20);
+        if (pair[0] === "body")   {
+            var b = bodies.push(new JingoBody()); 
+            b-=1;
         }
-        if (pair[0] === "mass")   bodies[b - 1].mass = Number(pair[1]);
-        if (pair[0] === "size")   bodies[b - 1].size = Number(pair[1]);
-        if (pair[0] === "x")      bodies[b - 1].P.x = Number(pair[1]);
-        if (pair[0] === "y")      bodies[b - 1].P.y = Number(pair[1]);
-        if (pair[0] === "z")      bodies[b - 1].P.z = Number(pair[1]);
-        if (pair[0] === "vx")     bodies[b - 1].V.x = Number(pair[1]);
-        if (pair[0] === "vy")     bodies[b - 1].V.y = Number(pair[1]);
-        if (pair[0] === "vz")     bodies[b - 1].V.z = Number(pair[1]);
+        if (pair[0] === "name")   bodies[b].name = pair[1];
+        if (pair[0] === "colour") {
+            bodies[b].colour = "#" + pair[1];
+            bodies[b].dColour= shadeColor(pair[1], -20);
+        }
+        if (pair[0] === "mass")   bodies[b].mass = Number(pair[1]);
+        if (pair[0] === "size")   bodies[b].size = Number(pair[1]);
+        if (pair[0] === "x")      bodies[b].P.x = Number(pair[1]);
+        if (pair[0] === "y")      bodies[b].P.y = Number(pair[1]);
+        if (pair[0] === "z")      bodies[b].P.z = Number(pair[1]);
+        if (pair[0] === "vx")     bodies[b].V.x = Number(pair[1]);
+        if (pair[0] === "vy")     bodies[b].V.y = Number(pair[1]);
+        if (pair[0] === "vz")     bodies[b].V.z = Number(pair[1]);
         if (pair[0] === "central"){
-            bodies[b - 1].central = true;
-            parms.centralmass = b-1;
+            bodies[b].central = true;
+            parms.centralmass = b;  // body number b is the central mass
             parms.central=true;
         }
-        if (pair[0] === "noorbit") bodies[b - 1].orbit = false;
-        if (pair[0] === "notrail") bodies[b - 1].trail = false;
-        if (pair[0] === "aster")   bodies[b - 1].aster = true;
+        if (pair[0] === "noorbit") bodies[b].orbit = false;
+        if (pair[0] === "notrail") bodies[b].trail = false;
+        if (pair[0] === "aster")   bodies[b].aster = true;
         if (pair[0] === "follow"){
-            parms.followBody = b - 1;
+            parms.followBody = b;
             parms.follow=true;
         }
         if (pair[0] === "focus") {
-            parms.focusBody = b - 1;
+            parms.focusBody = b;
             parms.focus = true;
         }
     }
     
-    parms.bodyCount = b;                         // save body count
+    parms.bodyCount = b+1;                       // save body count
     if (parms.direction < 0)  reverse();         // set direction
     rate = parms.showStep/(parms.sleep + 4);     // set initial simulation rate
     setShowType();
@@ -127,7 +122,7 @@ function init(jdffile) {
                 bodies[n].relpar = parms.centralmass.gmass / parms.vcc;
                 bodies[n].relmass = bodies[n].gmass * (1.0 + bodies[n].V.sqr() / (2 * parms.vcc) - relsum(n) / (2 * parms.vcc));
             }
-            fixBaric(true);          // fix relativistic barycentre
+            fixBaric(true); // fix relativistic barycentre
         }
   
     // Set body's nP and nV initial values equal to P and V
@@ -136,7 +131,7 @@ function init(jdffile) {
             bodies[n].nV.copy(bodies[n].V);
         }
      
-    // doEnergy();           // calculate initial energy (not implemented)
+    // doEnergy();           // calculate initial energy (not implemented in js version)
     // eStart = eTot;        // save initial energy
     
     // calculate initial accelerations and integration step   
@@ -172,6 +167,8 @@ function setShowType() {
  * 
  */
 function Screen(){
+    // there are two layers of canvas. this allows us to clear orbits and planets
+    // from layer 1 while retaining trails in layer 2.
     this.canvas1;   // The two canvas elements in the DOM
     this.canvas2; 
     this.ctx1;      // the two graphic contexts for the canvases
@@ -179,13 +176,13 @@ function Screen(){
     this.hi;        // height and width and scale (pixels per AU)
     this.wi;
     this.scale=50;    
-    this.centx;      // centre x and y pixels
+    this.centx;     // centre x and y pixels
     this.centy;
-    this.up=0;        // user control values up, left, tilt, rotate
+    this.up=0;      // user control values up, left, tilt, rotate
     this.left=0;
     this.tilt=0;
     this.rotate=0;
-    this.sinr;      // sines and cosines of rotate and tilt
+    this.sinr;      // pre-calc sines and cosines of rotate and tilt
     this.cosr;
     this.sint;
     this.cost;
@@ -201,21 +198,21 @@ function Screen(){
         this.ctx2 = this.canvas2.getContext("2d"); 
         this.reSize();
     };
-    // set up commonly used sines and cosines
+    // re-calculate commonly used sines and cosines
     this.doAngles = function () {    
         this.sint = Math.sin(this.tilt);   
         this.cost = Math.cos(this.tilt);  
         this.sinr = Math.sin(this.rotate); 
         this.cosr = Math.cos(this.rotate); 
     };
-    // clear the background canvas
+    // clear the background canvas that contains the object trails
     this.clearTrails = function () {
         this.ctx1.fillStyle = "#000000";
         this.ctx1.beginPath();
         this.ctx1.rect(0,0,this.wi,this.hi);
         this.ctx1.fill();
     };
-    // scear the foreground canvas
+    // clear the foreground canvas that contains the planets
     this.clearPlanets = function () {
         this.ctx2.clearRect(0,0,this.wi,this.hi);
     };
@@ -229,7 +226,8 @@ function Screen(){
         pix.y = this.centy - this.up
                 +(-this.scale * (this.cost*this.W.y + this.sint*this.W.z));        
     };
-    // draw a trail segment for a body
+    // draw a trail segment for a body. If small inclination or above ecliptic
+    // set full colour, else set reduced colour.
     this.drawTrail = function (bod) {
         if (bod.incl<0.07 || bod.P.z>0) {
             this.ctx1.fillStyle = bod.colour;
@@ -267,6 +265,7 @@ function Screen(){
     this.drawOrbit = function (bdy, central) {
         // need to consider best value for dt 
         // need to use toScreen raher than repeat code here
+        // need to optimise the size of dt or replace with ellipse function
         
         var x,y,z,x1,y1,z1,x2,y2,z2,x3,y3,z3,nx,ny;
         var dt=0.02;   
@@ -311,6 +310,30 @@ function Screen(){
         }
         this.ctx2.stroke();
         
+        /*********** this is a sandbox for testing ellipse drawing using native
+         * ellipse(x,y,major,minor,rotation, from to).
+        
+        // space centre of ellipse
+        z3 = -(bdy.c * bdy.sini);
+        x3 = bdy.c * bdy.cosi * bdy.coso;
+        y3 = bdy.c * bdy.cosi * bdy.sino;
+        // screen centre of ellipse
+        y=y3*this.cosr-x3*this.sinr;    x=x3*this.cosr+y3*this.sinr;    z=z3; // rotate
+        nx =(this.scale*x);  ny =(-this.scale*(y*this.cost+z*this.sint));     // tilt + screen positions
+        nx = nx +this.centx - this.left; ny = ny + this.centy - this.up;      // adjust centre point
+        
+        // calce other parameters
+        let va = bdy.a * this.scale;
+        let vb = Math.abs(bdy.b * this.scale * this.cost);
+        let vr = bdy.w;
+                
+        this.ctx2.beginPath();
+        this.ctx2.ellipse(nx,ny,va, vb, vr, 0, Math.PI *2);
+        this.ctx2.stroke();
+        
+        ******************/
+        
+        
     };
     // do focus modifies the rotation sines and cosines to focus on the specified body 
     this.doFocus = function (b) {
@@ -353,12 +376,15 @@ function Screen(){
  * Run the integration 
  */
 function integrate() {
+    // we get here when there is a new animation frame available. then integrate
+    // for sufficient time since the last animation frame was constructed. then
+    // redraw the diagram.
    
     // process any mousedown requests, calculate orbital elments and draw the planets
     checkMouse();
     doElements();
     draw(); 
-    // if showtime is fixed integrate for sowtime else use rate to determin the
+    // if showtime is fixed integrate for showtime else use rate to determin the
     // length of the next integration step
     if (parms.fixed) {
         step = parms.showStep;
@@ -377,7 +403,7 @@ function integrate() {
     do {
         // calcStep must not be bigger than remaining step time
         if (calcStep>step) {calcStep = step;}
-        // execute one Yoshida step
+        // execute one Yoshida6 step
         for (var i=0; i<4; i++) {leapFrog(calcStep*YO6[i]);}
         for (var i=0; i<3; i++) {leapFrog(calcStep*YO6[2-i]);}
         // accumulate time integrated
@@ -395,8 +421,8 @@ function integrate() {
  */
 function checkMouse() {
     if (mouseevent===0) {return;}
-    // loopMod is used to adjust the rate of change of parameter according to the
-    // speed of the refesh rate
+    // loopMod is used to adjust the rate of change of parameters according to the
+    // speed of the screen refesh rate
     var loopMod = loopTime/1000;
     switch (mouseevent) {
         case 1:
@@ -430,8 +456,6 @@ function checkMouse() {
             rate *=  (1 - loopMod);
             break;
     }
-    
-    
 } 
 
 
@@ -440,7 +464,7 @@ function checkMouse() {
  */
 function draw() {
     var fmass, cmass;
-    // clear the trails display if necessary
+    // clear the trails display only if necessary
     if (reDraw) {
         scrn.doAngles();
         scrn.clearTrails();
@@ -511,7 +535,7 @@ function leapFrog(s) {
 }
 
 /**
- * calculate the acceleration experienced by eac body due to the gravity of all the other bodies. 
+ * calculate the acceleration experienced by each body due to the gravity of all the other bodies. 
  */
 function accelerate() {
     /* define indexes */
@@ -733,14 +757,14 @@ function msu() {
 // Called when the window (DOM) is resized.
 function resizeCanvas() {
     scrn.reSize();
-}
-// Mousedown innside the display
+} 
+// Mousedown innside the display area to effect drag
 function mdown(event) {
     event.preventDefault();
     saveX = event.clientX;
     saveY = event.clientY;
 }
-function mup(evt) {
+function mup(event) {
     scrn.up+=  saveY - event.clientY; 
     scrn.left+= saveX - event.clientX;
     reDraw=true;
