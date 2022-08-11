@@ -1,3 +1,9 @@
+/*
+ * This file contains a collection of javascript object definitions 
+ * 
+ */
+
+"use strict";
 /***********************************************************************************************
  *                              JingoBody 
  *                              
@@ -131,14 +137,14 @@ function JingoBody() {
 
         // Decide on orbit type (anything near 1 is assumed to be 1 so orbit type does not keep changing for
         // typical Oort Cloud comets)
-        if (this.e > 0.99) {           // if > 0.99 assume parabolic
-            otype = 1;
+        if (this.e > 0.998) {           // if > 0.998 assume parabolic
+            this.otype = 1;
         }  else  {                     //   else assume elliptica (hyperbolic not implemented)
-            otype = 0;
+            this.otype = 0;
         }                      
        
         // compute remaining elements depending on orbit type
-        // RECONSTRUCT THIS SECTION FROM JINGO IF REQUIRED
+        // RECONSTRUCT THIS SECTION FROM JINGO DESKTO VERSION IF REQUIRED
        
         //*********************************************************************************
         // At this point, the orbit is solved. The next section computes stuff required
@@ -318,7 +324,7 @@ function ParameterSet() {
     this.vStep=100;                      // variable step size parameter
     this.sleep=20;                       // notional time between displays 
     this.orbits=false;                   // draw orbis? 
-    this.info = true;                    // (not used here)
+    this.info = true;                    // (not used in the javascript version)
     this.julian=0;                       // julian date of simulation start
     this.followBody= 0;                  // the body to hold centrally
     this.follow=false;                   // is there a body to hold centrally?

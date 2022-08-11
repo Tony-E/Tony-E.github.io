@@ -2,7 +2,7 @@
  *                             Global Variables
  *
  */
-//"use strict";
+"use strict";
 // TODO put follow and focus objects into parms rather than body numbers
 // global variables and objects
 var bodies;    // array of bodies in the system
@@ -12,8 +12,9 @@ var runTime;   // time simlation has been running or current simulated date
 var now;       // current time (MS since 1970) at start of integration step
 var then;      // time last time round the loop
 var rate;      // speed of simulation i days per millisecond
-var step;
+var step;      //
 var calcStep;  // integration step size
+var direction; // plus or minus one 
 var animate;   // animation handle
 var mouseevent =0;   // whic button was pressed for mousedown event
 var loopTime = 30;   // number of milliseconds since last integration was done
@@ -46,7 +47,7 @@ function init(jdffile) {
     
     
    // retrieve and process definition file 
-    var jdftext = httpGet("../jdf/"+jdffile);      // get definition file
+    var jdftext = httpGet("./jdf/"+jdffile);      // get definition file
     var jdfarray = jdftext.split(/\s+/gm);        // split into tokens 
     for (var i = 0; i < jdfarray.length; i++) {   // save parameters and body data
         var line = jdfarray[i];
@@ -56,6 +57,7 @@ function init(jdffile) {
         if (pair[0] === "fixed")    parms.fixed = true;
         if (pair[0] === "sleep")    parms.sleep = Number(pair[1]);
         if (pair[0] === "showtype") parms.showType = Number(pair[1]);
+        if (pair[0] === "reversed")  parms.direction = -1; 
         if (pair[0] === "scale")    scrn.scale = Number(pair[1]);
         if (pair[0] === "up")       scrn.up = Number(pair[1]);
         if (pair[0] === "left")     scrn.left = Number(pair[1]);
@@ -101,7 +103,11 @@ function init(jdffile) {
     }
     
     parms.bodyCount = b+1;                       // save body count
-    if (parms.direction < 0)  reverse();         // set direction
+    if (parms.direction < 0) {                   // set direction
+        for (var i = 0; i < parms.bodyCount; i++) {
+        bodies[i].V.mult(-1);
+        }
+    }
     rate = parms.showStep/(parms.sleep + 4);     // set initial simulation rate
     setShowType();
         
@@ -109,7 +115,7 @@ function init(jdffile) {
     for (var n = 0; n < parms.bodyCount; n++) {
         bodies[n].gmass = bodies[n].mass * parms.G;
         if (bodies[n].aster) {
-            if (bodies[n].name.contains("[")) {
+            if (bodies[n].name.includes("[")) {
                 bodies[n].asterName = bodies[n].name.substring(0, bodies[n].name.indexOf("["));
             }
         }
