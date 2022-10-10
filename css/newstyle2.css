@@ -54,15 +54,16 @@ body {
 }
 
 .button {
-    width: 80px;
-    background-color: #ccffcc;
-    font-size: 14px;
-    padding: 6px 6px;
+    width: 50px;
+    background-color: #111133;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 4px 4px;
     border-radius: 4px;
-    border: 1px solid #6666aa;
+    border: 1px solid #666600;
     } 
     
-.button:hover {background-color: #aaddaa;}
+.button:hover {background-color: #111177;}
     
 .button2 {
     width: 80px;
