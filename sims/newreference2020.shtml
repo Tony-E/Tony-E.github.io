@@ -61,7 +61,7 @@
           
 <!-- Initialise the simulation - insert the name of the jdf file for the required simulation -->               
         <script>
-            init("newreference.jdf");
+            init("P2022R1.jdf");
         </script>
     </body>
 </html>
