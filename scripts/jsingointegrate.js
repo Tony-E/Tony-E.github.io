@@ -6,6 +6,7 @@
 // TODO put follow and focus objects into parms rather than body numbers
 // global variables and objects
 var bodies;    // array of bodies in the system
+var asters;    // array of bodies marked as "aster"
 var parms;     // parameter set controlling the behaviour of the integrator
 var scrn;      // the display screen
 var runTime;   // time simlation has been running or current simulated date
@@ -22,6 +23,7 @@ var showType = 0;    // 0=orbits, 1=trails, 2=both, 3=neither
 var running;         // integration is running
 var reDraw=true;     // does the trail-display need to be re-drawn?
 var displayed=false; // have the planets been drawn previously?
+var saveX, saveY;
 var pi2 = 2*Math.PI; 
 // Yoshida 6th order integration steps
 var YO6 = [0.784513610477560E0, 0.235573213359357E0, -1.17767998417887E0, 1.31518632068391E0];
@@ -41,13 +43,14 @@ function init(jdffile) {
     scrn = new Screen();                         // set up the screen (canvases)
     scrn.init();      
     bodies = [];                                 // create array of bodies
+    asters = [];
     parms = new ParameterSet();                  // create a parameter set
     runTime= new Date();                         // start time is now
     then = new Date();                           // initialise then
     
     
    // retrieve and process definition file 
-    var jdftext = httpGet("../jdf/"+jdffile);      // get definition file
+    var jdftext = httpGet("./jdf/"+jdffile);      // get definition file
     var jdfarray = jdftext.split(/\s+/gm);        // split into tokens 
     for (var i = 0; i < jdfarray.length; i++) {   // save parameters and body data
         var line = jdfarray[i];
@@ -91,7 +94,10 @@ function init(jdffile) {
         }
         if (pair[0] === "noorbit") bodies[b].orbit = false;
         if (pair[0] === "notrail") bodies[b].trail = false;
-        if (pair[0] === "aster")   bodies[b].aster = true;
+        if (pair[0] === "aster")  {
+            bodies[b].aster = true;
+            parms.aster = true;
+        }
         if (pair[0] === "follow"){
             parms.followBody = b;
             parms.follow=true;
@@ -101,14 +107,16 @@ function init(jdffile) {
             parms.focus = true;
         }
     }
+    parms.bodyCount = b+1; // save body count
     
-    parms.bodyCount = b+1;                       // save body count
-    if (parms.direction < 0) {                   // set direction
+    // if direction is reverse, set velocities to negative
+    if (parms.direction < 0) {       
         for (var i = 0; i < parms.bodyCount; i++) {
         bodies[i].V.mult(-1);
         }
     }
-    rate = parms.showStep/(parms.sleep + 4);     // set initial simulation rate
+    // set initial simulation speed and type of display
+    rate = parms.showStep/(parms.sleep + 4);   
     setShowType();
         
     // set all the bodies gmass and asterNames for clones 
@@ -118,6 +126,7 @@ function init(jdffile) {
             if (bodies[n].name.includes("[")) {
                 bodies[n].asterName = bodies[n].name.substring(0, bodies[n].name.indexOf("["));
             }
+            asters.push(n); // add asters to asterlist
         }
     }
     
@@ -265,6 +274,10 @@ function Screen(){
         } else {
             this.ctx2.fillText(runTime.value/86400000 + " Days",20,20);
         }
+        if (parms.aster) {
+            this.ctx2.fillText("Dist: " + parms.asterRD.toFixed(6),200,20);
+            this.ctx2.fillText("Vel: " + parms.asterRV.toFixed(6),400,20);
+        }
         
     };
     // draw an orbit ellipse
@@ -338,9 +351,8 @@ function Screen(){
         this.ctx2.stroke();
         
         ******************/
-        
-        
     };
+    
     // do focus modifies the rotation sines and cosines to focus on the specified body 
     this.doFocus = function (b) {
       var r, sinf, cosf;
@@ -417,7 +429,28 @@ function integrate() {
         // reassess required calcstep
         calcStep = doEncounter() / parms.vStep;
     } while (step>0);
-    
+    // check for asters and recalculate their distance and velocity
+    // if one aster then relative to barycentre
+    // if multiple asters then RMS value of their mutual distances and velocities
+    if (asters.length === 1) {
+        let n = asters[0];
+        parms.asterRD = bodies[n].P.mag();
+        parms.asterRV = bodies[n].V.mag();
+    }
+    if (asters.length > 1) {
+        parms.asterRD = 0;
+        parms.asterRV = 0;
+        for (var i = 0; i<asters.length-1; i++) {
+            for (var j = i+1; j<asters.length; j++ ) {
+               let n = asters[i];
+               let m = asters[j];
+               parms.asterRD+= bodies[n].P.dist2(bodies[m].P);
+               parms.asterRV+= bodies[n].V.dist2(bodies[m].V);
+            }
+        }
+        parms.asterRD = Math.sqrt(parms.asterRD);
+        parms.asterRV = Math.sqrt(parms.asterRV);
+    }
     // if running request next animation frame 
     if (running) {animate = requestAnimationFrame(integrate);}
 }
@@ -431,34 +464,34 @@ function checkMouse() {
     // speed of the screen refesh rate
     var loopMod = loopTime/1000;
     switch (mouseevent) {
-        case 1:
+        case 1: // zoom in
             scrn.scale*= (1+ loopMod);
             reDraw=true;
             break;
-        case 2:
+        case 2: // zoom out
             scrn.scale*= (1-loopMod);
             reDraw=true;
             break;
-        case 3:
+        case 3: // tilt +
             scrn.tilt += loopMod;
             reDraw=true;
             break;
-        case 4:
+        case 4: // tilt -
             scrn.tilt -= loopMod;
             reDraw=true;
             break;
-        case 5:
+        case 5: // rotate clockwise
             scrn.rotate += loopMod;
             reDraw=true;
             break;
-        case 6:
+        case 6: // rotate anticlockwise
             scrn.rotate -= loopMod;
             reDraw=true;
             break;
-        case 7:
+        case 7: // faster
             rate *= (1 + loopMod);
             break;
-        case 8:
+        case 8: // slower
             rate *=  (1 - loopMod);
             break;
     }
@@ -714,7 +747,7 @@ function doEncounter() {
         return Math.sqrt(clenc);
     }
 
-
+/*** standard function to read file from URL */
 function httpGet(theUrl) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", theUrl, false); // false for synchronous request
@@ -728,11 +761,11 @@ function httpGet(theUrl) {
 function stopStart() {
     if (running) {
         running=false;
-        document.getElementById("stopStart").innerHTML = "Start";
+        document.getElementById("stopStart").innerHTML = "\u25B6";
         cancelAnimationFrame(animate);
     } else {
         running = true;
-        document.getElementById("stopStart").innerHTML = "Stop";
+        document.getElementById("stopStart").innerHTML = "\u25A0";
         animate = requestAnimationFrame(integrate);
     }
 }
