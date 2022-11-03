@@ -40,7 +40,7 @@
         
 <!-- Simulation area is 2 overlayed canvasses - do not change -->         
                 
- <div id="simarea">
+ <div id="simarea" onmousedown="mdown(event)" onmouseup="mup(event)">
         <div id="canvasid" >
             <canvas id="layer1" height="700" width="700">
                         Sorry, your browser does not support this HTML5 animation.</canvas>
