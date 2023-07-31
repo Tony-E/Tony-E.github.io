@@ -35,7 +35,9 @@
             <button class="button" title="Slower" type="button"  onmousedown="msd(8)" onmouseup="msu()"
 	                     ontouchstart="msd(8)" ontouchend="msu()" ontouchcancel="msu()">&#8811;</button>
             <button class="button" title="Cycle: Orbits, trails, both, neither" type="button"  onclick="trails()" >&#11053;</button>
-            <button class="button" title="Show/hide names"     type="button"  onclick="names()" >&#230;</button>         
+            <button class="button" title="Show/hide names"     type="button"  onclick="names()" >&#230;</button>  
+             
+<p> This is an overview of the Solar System starting 2020-01-01.5 </p>
         </div>  
         
 <!-- Simulation area is 2 overlayed canvasses - do not change -->         
