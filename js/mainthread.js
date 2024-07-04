@@ -69,7 +69,7 @@ function init() {
     let cookie = new Cookie();
     
    /* initial announcement */
-    comments.value += "Timenow " + now.toString() + "\n";
+    comments.value += "If list is empty, try Filter. \n Timenow " + now.toString() + "\n";
     let ra = sun.raDec.x / (15*toRadians);
     let dec= sun.raDec.y / toRadians;
     comments.value += "Sun RA/Decl: "+ ra.toFixed(2)+ " hours "+ dec.toFixed(2) + " degrees.\n";
