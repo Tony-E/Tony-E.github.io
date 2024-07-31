@@ -1,5 +1,6 @@
  
-/* global toRadians, sun, obs, filter */
+ 
+/* global toRadians, sun, obs,ob,filter */
  
 /* define math functions and constants as aid to readability. */
 var    twoPI = Math.PI*2,
@@ -22,12 +23,14 @@ class Coord {
         this.x = x;
         this.y = y;
     }
+    
    /* Sky angle between this coord and another coord c. */
     getAngle(c) {
         return acos(sin(c.y)*sin(this.y)+cos(c.y)*cos(this.y)*cos(c.x-this.x));
     }
+    
    /* Hours either side of meridian object p is above altitude alt. degrees 
-     * when viewed at an observatory located a this position. Zero is returned
+     * when viewed at an observatory located at this position. Zero is returned
      * if the object does not rise above alt. when at meridian.*/
     riseTime(p, alt) {
         let zRad = alt * toRadians;       
@@ -35,6 +38,7 @@ class Coord {
         if (isNaN(HARad)) return 0;
         return (HARad/toRadians)/15;
     }
+    
    /* Galactic latitude of this RA/Dec coordinate. */
     galLat(){
         let gpRA = 3.366;   // Galactic pole RA (radians)
@@ -43,6 +47,7 @@ class Coord {
                 cos(this.y) * cos(this.x-gpRA);
         return asin(d)/toRadians;
     }
+    
    /* Equatorial coord equivalent to this ecliptic coord */
     getEquatorial() {
         let eq = new Coord();
@@ -60,25 +65,25 @@ class Coord {
  **/
 class Body {
     constructor() {
-        this.id = "yyyy xxxx";
-        this.coord = new Coord(0,0);
-        this.v = 0.0;
-        this.h = 0.0;
-        this.type = "undef";
-        this.updated = "1/1/2000";  //updated or last ob
-        this.score = 99;
-        this.pha = false;
-        this.risk = false;
-        this.priority = "";
-        this.motion = 999;
-        this.visible = false;
-        
+        this.id = "yyyy xxxx";             // designation
+        this.coord = new Coord(0,0);       // RA/Decl
+        this.v = 0.0;                      // Magnitude
+        this.h = 0.0;                      // Size
+        this.type = "undef";               // Orbit type
+        this.updated = "1/1/2000";         // Last updated
+        this.score = 99;                   // NEO score
+        this.pha = false;                  // is it a PHA?
+        this.risk = false;                 // is it at risk?
+        this.priority = "";                // NEODyS priority
+        this.motion = 999;                 // motion "/m
+        this.visible = false;              // is it visible (passes filter)
     }   
+    
    /* check if this object is visible from current observatory. */
     checkVisible() {
         this.visible = false;
        /* number of hours above altitude at observatory */
-        let h = obs.position.riseTime(this.coord, filter.altLimit);
+        let h = obs[ob].position.riseTime(this.coord, filter.altLimit);
        /* not visible if never above altitude limit or too faint */
         if ((!(h>0)) || this.v>filter.magLimit) return;
        /* not visible if score/uncertainty too low */
@@ -88,6 +93,17 @@ class Body {
         if ( diff< h) {this.visible = true;}
     }
 } 
+
+/******************************************************************************
+ *  These are the set of neo priorities obtained from NEODyS.
+ * @type type
+ */
+class Priority {
+    constructor(pText) {
+        this.id = pText.slice(0,12).trim();                  // object it
+        this.pCode = (pText.slice(14,23).trim()).slice(0,3); // priority
+    }
+}
 
 /*****************************************************************
  * Class Observatory is an observatory.                       
@@ -99,8 +115,9 @@ class Observatory {
         this.code = code;
         this.name =name;
     }
-   /* ha is the length of astronomical day at this observatory */
-    setTimes() {
+   /* ha is the length of astronomical day at this observatory 
+    * (-18 refers to the start/end of astronomical twilight) */
+    setTime() {
         this.ha = abs(this.position.riseTime(sun.raDec, -18));
     }
 }
@@ -127,20 +144,25 @@ class Sun {
     }
 }
     
-/***********************************************************
- * Class Filter contains the flter values from the DOM.
+/******************************************************************************
+ * Class Filter contains the filter values from the document. If cookies are 
+ * allowed then filter values are saved (for 7 days) and retrieved from the
+ * cookie.
  **/
 class Filter {
     constructor() {
-        this.magLimit = 0;
-        this.altLimit =  0;
-        this.uncLimit = 0;
+        this.magLimit = 0;    // magnitude limit
+        this.altLimit =  0;   // altitude limit
+        this.uncLimit = 0;    // uncertainty limit
     }
+    
+   /* set filter values from the document and place in a cookie (if enabled) */ 
     setFilter() {
        /* get filter values from the document */
         this.magLimit = document.getElementById("mag").value;
-        this.altLimit =  document.getElementById("alt").value;
+        this.altLimit = document.getElementById("alt").value;
         this.uncLimit = document.getElementById("unc").value; 
+        
        /* if cookies enabled, save filter values */ 
         var cookie = new Cookie();
         if (cookie.enabled) {
@@ -149,7 +171,8 @@ class Filter {
             cookie.setCookie("uncLimit", this.uncLimit, 7);
         }
     }
-    /* if cookies enabled, load filter cookies */
+    
+    /* retrieve filter values from a cookie (if enabled) */
     getFilter() {
         var cookie = new Cookie();
         if (cookie.enabled) {
@@ -181,19 +204,29 @@ class Filter {
      if (x === "Cen") return "Centaur";
      return "unknown";
  }
+ 
+ /*****************************************************************************
+  * A cookie is a small file stored by the browser on the user's machine. It
+  * is used to save information from one visit to the next. In this application
+  * only the values of the filter are stored in a cookie if the user activates
+  * the Filter button.
+  */
  class Cookie {
      constructor() {
-        this.enabled = navigator.cookieEnabled;
-        this.magLimit = 0;
-        this.altLimit =  0;
-        this.uncLimit = 0;
+        this.enabled = navigator.cookieEnabled; //are cookies enabled by user?
+        this.magLimit = 0;   // magnitude limit
+        this.altLimit =  0;  // altitude limit
+        this.uncLimit = 0;   // uncertainty limit
      }
+     
+    /* set a cookie with name=cname, content=cvalue, expiry in "exdays" */ 
      setCookie(cname, cvalue, exdays) {
          const d = new Date();
          d.setTime(d.getTime() + (exdays*24*60*60*1000));
          let expires = "expires="+ d.toUTCString();
          document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
      }
+    /* retrieve and decode cookie (standard code from W3Schools) */ 
      getCookie(cname) {
          let name = cname + "=";
          let decodedCookie = decodeURIComponent(document.cookie);
