@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cosmos - Use of the Tusi Couple</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Simulation of the Tusi Couple as used by Copernicus.">
+        <meta property="og:title" content="Cosmos - Simulations of Planetary Motion.">
+        <meta property="og:image" content="images.xdzr.gif">
+        <meta name="twitter:card" content="Cosmos - Simulation of Tusi Couple">
+        <link type="text/css" rel="stylesheet" href="css/mycosmostuff.css">
+        <script src="js/cosmos.js"></script>
+        <script src="js/cosmosutil.js"></script>
+        <script src="js/copernicus.js"></script>
+    </head>
+    <body onresize="reSize()"> 
+        <table> 
+            <tbody> 
+                <tr> 
+                    <td class="header">Tusi Couple</td> 
+                    <td class="header">-</td>
+                </tr> 
+                
+                <tr> 
+                    <td class="content">    
+                        <div class="ctlbuttons">
+                            <button class="button" title="Stop/start the animation" id="stopStart" type="button" onclick="stopStart()">&#x25A0;</button>
+                            <button class="button" title= "Reverse direction" type="button"  onclick="reverse()">&#x21D4;</button>
+                            <button class="button" title="Zoom in" type="button"  onmousedown="msd(1)" onmouseup="msu()" 
+                                    ontouchstart="msd(1)" ontouchend="msu()" ontouchcancel="msu()">&#x2295;</button>
+                            <button class="button" title="Zoom out" type="button"  onmousedown="msd(2)" onmouseup="msu()"
+                                    ontouchstart="msd(2)" ontouchend="msu()" ontouchcancel="msu()">&#x2296;</button>
+                            <button class="button" title="Tilt up" type="button"  onmousedown="msd(3)" onmouseup="msu()"
+                                    ontouchstart="msd(3)" ontouchend="msu()" ontouchcancel="msu()">&#x2909;</button>
+                            <button class="button" title="Tilt down" type="button"  onmousedown="msd(4)" onmouseup="msu()"
+                                    ontouchstart="msd(4)" ontouchend="msu()" ontouchcancel="msu()">&#x2908;</button>
+                            <button class="button" title="Rotate clockwise" type="button"  onmousedown="msd(5)" onmouseup="msu()"
+                                    ontouchstart="msd(5)" ontouchend="msu()" ontouchcancel="msu()">&#x21BB;</button>
+                            <button class="button" title="Roate anticlockwise" type="button"  onmousedown="msd(6)" onmouseup="msu()"
+                                    ontouchstart="msd(6)" ontouchend="msu()" ontouchcancel="msu()">&#x21BA;</button>
+                            <button class="button" title="Faster" type="button"  onmousedown="msd(7)" onmouseup="msu()"
+                                    ontouchstart="msd(7)" ontouchend="msu()" ontouchcancel="msu()">>>></button>
+                            <button class="button" title="Slower" type="button"  onmousedown="msd(8)" onmouseup="msu()"
+                                    ontouchstart="msd(8)" ontouchend="msu()" ontouchcancel="msu()">></button>            
+                        </div>
+                        <br>    
+               
+                        <canvas id="layer1" onmousedown="mdown(event)" onmouseup="mup(event)">
+                            This is an animated simulation of Ptolemy's model of the Tusi Couple.
+                        </canvas>  
+               
+                    </td> 
+                    <td class="rightScroll"> 
+                        <div>
+                            <h2 class='sideTitle'> Tusi Couple</h2>
+                        <p>The "Tusi Couple" was introduced by Nasir al-Din al-Tusi in his 1247 commentary on Ptolemy's 
+                            Almagest. It was introduced as an alternative to Ptolemy's equant in order to provide cyclic
+                            linear motion from uniform circular motion.</p>
+                        <p>The large circle rotates anticlockwise. The small circle rotates clockwise such that it 
+                            maintains a tangent with the large circle at a fiex point of the large circle. A point on the circumference 
+                            of the small circle moves in linear, cyclic motion.</p>
+                        <p>Another way of looking at it is that the small circle is rolling around the inner circumference of 
+                           the large circle.</p>
+                        <p>Copernicus adopted the Tusi Couple to generate a linear cyclic motion 
+                            from circular uniform motion. although it is not clear if he copied the Tusi mechanism 
+                            from earlier philosophers or devised it himself. </p>
+                                            
+                        <br>
+                        <br>
+                    </div> 
+                    </td> 
+                </tr> 
+                <tr>
+                    <td class="footer" colspan="2"> Tony Evans 2022-2025 </td> 
+                </tr>
+            </tbody> 
+        </table>  
+        <script>
+            init(11);
+        </script>
+    </body>
+</html>
